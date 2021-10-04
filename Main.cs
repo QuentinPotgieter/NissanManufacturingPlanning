@@ -63,5 +63,10 @@ namespace NissanManufacturingPlanning
             ProductionPlan productionPlan = new ProductionPlan();
             productionPlan.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
