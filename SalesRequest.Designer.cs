@@ -30,16 +30,16 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.numQuantity = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.dateRequired = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.numQuantity = new System.Windows.Forms.NumericUpDown();
-            this.lblQuantity = new System.Windows.Forms.Label();
             this.cbbDerivative = new System.Windows.Forms.ComboBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -56,6 +56,22 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Location = new System.Drawing.Point(10, 55);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(49, 13);
+            this.lblQuantity.TabIndex = 5;
+            this.lblQuantity.Text = "Quantity:";
+            // 
+            // numQuantity
+            // 
+            this.numQuantity.Location = new System.Drawing.Point(13, 69);
+            this.numQuantity.Name = "numQuantity";
+            this.numQuantity.Size = new System.Drawing.Size(120, 20);
+            this.numQuantity.TabIndex = 4;
             // 
             // label1
             // 
@@ -85,6 +101,15 @@ namespace NissanManufacturingPlanning
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vehicle";
             // 
+            // cbbDerivative
+            // 
+            this.cbbDerivative.FormattingEnabled = true;
+            this.cbbDerivative.Location = new System.Drawing.Point(12, 27);
+            this.cbbDerivative.Name = "cbbDerivative";
+            this.cbbDerivative.Size = new System.Drawing.Size(301, 21);
+            this.cbbDerivative.TabIndex = 1;
+            this.cbbDerivative.Text = "Derivative";
+            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(206, 204);
@@ -95,31 +120,6 @@ namespace NissanManufacturingPlanning
             this.btnAdd.Text = "Add Sales Request";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // numQuantity
-            // 
-            this.numQuantity.Location = new System.Drawing.Point(13, 69);
-            this.numQuantity.Name = "numQuantity";
-            this.numQuantity.Size = new System.Drawing.Size(120, 20);
-            this.numQuantity.TabIndex = 4;
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(10, 55);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(49, 13);
-            this.lblQuantity.TabIndex = 5;
-            this.lblQuantity.Text = "Quantity:";
-            // 
-            // cbbDerivative
-            // 
-            this.cbbDerivative.FormattingEnabled = true;
-            this.cbbDerivative.Location = new System.Drawing.Point(12, 27);
-            this.cbbDerivative.Name = "cbbDerivative";
-            this.cbbDerivative.Size = new System.Drawing.Size(301, 21);
-            this.cbbDerivative.TabIndex = 1;
-            this.cbbDerivative.Text = "Derivative";
             // 
             // SalesRequest
             // 
@@ -132,10 +132,11 @@ namespace NissanManufacturingPlanning
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SalesRequest";
             this.Text = "SalesRequest";
+            this.Shown += new System.EventHandler(this.SalesRequest_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

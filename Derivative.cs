@@ -39,6 +39,20 @@ namespace NissanManufacturingPlanning
                 MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
                 return;
             }
+
+            new Main().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats)" +
+                                 " VALUES ("+
+                                 new Main().QuotedStr(model) + "," +
+                                 new Main().QuotedStr(name) + "," +
+                                 new Main().QuotedStr(color) + "," +
+                                 electricwindows + "," +
+                                 autogearbox + "," +
+                                 sunroof + "," +
+                                 leather + "," +
+                                 ")");
+
+            Derivatives.ActiveForm.Show();
+            this.Close();
         }
     }
 }

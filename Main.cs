@@ -47,6 +47,44 @@ namespace NissanManufacturingPlanning
             }
         }
 
+        public List<string> FillComboBox(string query) //Method is to return array used to fill combo box
+        {
+            List<string> list = new List<string>();
+            //run sql select with query param
+            //loop to fill list
+            return list;
+        }
+
+        public void SqlInsert(string query)
+        {
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-41A65K6;Initial Catalog=NissanManufacturingDB;Integrated Security=True");
+                conn.Open();
+
+                adap = new SqlDataAdapter();
+                comm = new SqlCommand(query, conn);
+                adap.InsertCommand = comm;
+                adap.InsertCommand.ExecuteNonQuery();
+
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        public string QuotedStr(String S)
+        {
+            if (string.IsNullOrEmpty(S))
+            {
+                return "''";
+            }
+
+            return ("'" + S.Replace("'", "''") + "'");
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();            
@@ -100,5 +138,9 @@ namespace NissanManufacturingPlanning
             QuerySelectAll("ProductionPlan", dgvProductionOutput);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

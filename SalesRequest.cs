@@ -23,6 +23,12 @@ namespace NissanManufacturingPlanning
             decimal quantity = numQuantity.Value;
             string derivative = cbbDerivative.SelectedIndex.ToString();
 
+            Main.ActiveForm.Show();
+            this.Close();
+        }
+
+        private void SalesRequest_Shown(object sender, EventArgs e)
+        {
             //load derivatives into combobox
         }
     }

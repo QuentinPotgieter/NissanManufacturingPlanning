@@ -32,6 +32,13 @@ namespace NissanManufacturingPlanning
                 MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
                 return;
             }
+
+            new Main().SqlInsert("INSERT INTO Colors (Color) VALUES ("+
+                new Main().QuotedStr(name) +
+                ")");
+
+            Colors.ActiveForm.Show();
+            this.Close();
         }
     }
 }

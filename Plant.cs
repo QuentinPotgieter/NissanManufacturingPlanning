@@ -57,6 +57,9 @@ namespace NissanManufacturingPlanning
                 MessageBox.Show("The address you have entered is too long (Max 50 Characters)");
                 return;
             }
+
+            Plants.ActiveForm.Show();
+            this.Close();
         }
     }
 }
