@@ -1,7 +1,7 @@
 ﻿
 namespace NissanManufacturingPlanning
 {
-    partial class Derivative
+    partial class DerivativeForm
     {
         /// <summary>
         /// Required designer variable.

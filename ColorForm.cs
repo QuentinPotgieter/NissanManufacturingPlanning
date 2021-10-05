@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NissanManufacturingPlanning.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,10 @@ using System.Windows.Forms;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class Motor : Form
+    public partial class ColorForm : Form
     {
-        public Motor()
+        public VehicleColor fcolor;
+        public ColorForm()
         {
             InitializeComponent();
         }
@@ -20,7 +22,6 @@ namespace NissanManufacturingPlanning
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string name = tbxName.Text;
-            string size = tbxSize.Text; //Double check properties for validation
 
             // Input validation
             if (name == null)
@@ -34,7 +35,7 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            Motors.ActiveForm.Show();
+            fcolor = new VehicleColor(name);
             this.Close();
         }
     }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class Derivative : Form
+    public partial class DerivativeForm : Form
     {
-        public Derivative()
+        public DerivativeForm()
         {
             InitializeComponent();
         }
@@ -40,18 +40,18 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            new Main().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats)" +
+            new MainForm().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats)" +
                                  " VALUES ("+
-                                 new Main().QuotedStr(model) + "," +
-                                 new Main().QuotedStr(name) + "," +
-                                 new Main().QuotedStr(color) + "," +
+                                 new MainForm().QuotedStr(model) + "," +
+                                 new MainForm().QuotedStr(name) + "," +
+                                 new MainForm().QuotedStr(color) + "," +
                                  electricwindows + "," +
                                  autogearbox + "," +
                                  sunroof + "," +
                                  leather + "," +
                                  ")");
 
-            Derivatives.ActiveForm.Show();
+            DerivativesForm.ActiveForm.Show();
             this.Close();
         }
     }

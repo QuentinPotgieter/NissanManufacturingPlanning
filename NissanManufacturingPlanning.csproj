@@ -46,71 +46,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Color.cs">
+    <Compile Include="Classes\VehicleColor.cs" />
+    <Compile Include="ColorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Color.Designer.cs">
-      <DependentUpon>Color.cs</DependentUpon>
+    <Compile Include="ColorForm.Designer.cs">
+      <DependentUpon>ColorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Colors.cs">
+    <Compile Include="ColorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Colors.Designer.cs">
-      <DependentUpon>Colors.cs</DependentUpon>
+    <Compile Include="ColorsForm.Designer.cs">
+      <DependentUpon>ColorsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Derivative.cs">
+    <Compile Include="DerivativeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Derivative.Designer.cs">
-      <DependentUpon>Derivative.cs</DependentUpon>
+    <Compile Include="DerivativeForm.Designer.cs">
+      <DependentUpon>DerivativeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Derivatives.cs">
+    <Compile Include="DerivativesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Derivatives.Designer.cs">
-      <DependentUpon>Derivatives.cs</DependentUpon>
+    <Compile Include="DerivativesForm.Designer.cs">
+      <DependentUpon>DerivativesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model.cs">
+    <Compile Include="ModelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model.Designer.cs">
-      <DependentUpon>Model.cs</DependentUpon>
+    <Compile Include="ModelForm.Designer.cs">
+      <DependentUpon>ModelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models.cs">
+    <Compile Include="ModelsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Models.Designer.cs">
-      <DependentUpon>Models.cs</DependentUpon>
+    <Compile Include="ModelsForm.Designer.cs">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Motor.cs">
+    <Compile Include="MotorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Motor.Designer.cs">
-      <DependentUpon>Motor.cs</DependentUpon>
+    <Compile Include="MotorForm.Designer.cs">
+      <DependentUpon>MotorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Motors.cs">
+    <Compile Include="MotorsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Motors.Designer.cs">
-      <DependentUpon>Motors.cs</DependentUpon>
+    <Compile Include="MotorsForm.Designer.cs">
+      <DependentUpon>MotorsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plant.cs">
+    <Compile Include="PlantForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plant.Designer.cs">
-      <DependentUpon>Plant.cs</DependentUpon>
+    <Compile Include="PlantForm.Designer.cs">
+      <DependentUpon>PlantForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plants.cs">
+    <Compile Include="PlantsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Plants.Designer.cs">
-      <DependentUpon>Plants.cs</DependentUpon>
+    <Compile Include="PlantsForm.Designer.cs">
+      <DependentUpon>PlantsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductionPlan.cs">
       <SubType>Form</SubType>
@@ -120,44 +121,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SalesRequest.cs">
+    <Compile Include="SalesRequestForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SalesRequest.Designer.cs">
-      <DependentUpon>SalesRequest.cs</DependentUpon>
+    <Compile Include="SalesRequestForm.Designer.cs">
+      <DependentUpon>SalesRequestForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Color.resx">
-      <DependentUpon>Color.cs</DependentUpon>
+    <EmbeddedResource Include="ColorForm.resx">
+      <DependentUpon>ColorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Colors.resx">
-      <DependentUpon>Colors.cs</DependentUpon>
+    <EmbeddedResource Include="ColorsForm.resx">
+      <DependentUpon>ColorsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Derivative.resx">
-      <DependentUpon>Derivative.cs</DependentUpon>
+    <EmbeddedResource Include="DerivativeForm.resx">
+      <DependentUpon>DerivativeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Derivatives.resx">
-      <DependentUpon>Derivatives.cs</DependentUpon>
+    <EmbeddedResource Include="DerivativesForm.resx">
+      <DependentUpon>DerivativesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Model.resx">
-      <DependentUpon>Model.cs</DependentUpon>
+    <EmbeddedResource Include="ModelForm.resx">
+      <DependentUpon>ModelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Models.resx">
-      <DependentUpon>Models.cs</DependentUpon>
+    <EmbeddedResource Include="ModelsForm.resx">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Motor.resx">
-      <DependentUpon>Motor.cs</DependentUpon>
+    <EmbeddedResource Include="MotorForm.resx">
+      <DependentUpon>MotorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Motors.resx">
-      <DependentUpon>Motors.cs</DependentUpon>
+    <EmbeddedResource Include="MotorsForm.resx">
+      <DependentUpon>MotorsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plant.resx">
-      <DependentUpon>Plant.cs</DependentUpon>
+    <EmbeddedResource Include="PlantForm.resx">
+      <DependentUpon>PlantForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Plants.resx">
-      <DependentUpon>Plants.cs</DependentUpon>
+    <EmbeddedResource Include="PlantsForm.resx">
+      <DependentUpon>PlantsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductionPlan.resx">
       <DependentUpon>ProductionPlan.cs</DependentUpon>
@@ -171,8 +172,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SalesRequest.resx">
-      <DependentUpon>SalesRequest.cs</DependentUpon>
+    <EmbeddedResource Include="SalesRequestForm.resx">
+      <DependentUpon>SalesRequestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,7 +1,7 @@
 ﻿
 namespace NissanManufacturingPlanning
 {
-    partial class Plant
+    partial class PlantForm
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class Color : Form
+    public partial class MotorForm : Form
     {
-        public Color()
+        public MotorForm()
         {
             InitializeComponent();
         }
@@ -20,6 +20,7 @@ namespace NissanManufacturingPlanning
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string name = tbxName.Text;
+            string size = tbxSize.Text; //Double check properties for validation
 
             // Input validation
             if (name == null)
@@ -33,11 +34,7 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            new Main().SqlInsert("INSERT INTO Colors (Color) VALUES ("+
-                new Main().QuotedStr(name) +
-                ")");
-
-            Colors.ActiveForm.Show();
+            MotorsForm.ActiveForm.Show();
             this.Close();
         }
     }

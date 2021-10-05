@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class Motors : Form
+    public partial class MotorsForm : Form
     {
-        public Motors()
+        public MotorsForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Motor motor = new Motor();
+            MotorForm motor = new MotorForm();
             motor.ShowDialog();
         }
 
         private void Motors_Shown(object sender, EventArgs e)
         {
-            new Main().QuerySelectAll("Motors", dgvMotors);
+            new MainForm().QuerySelectAll("Motors", dgvMotors);
         }
     }
 };

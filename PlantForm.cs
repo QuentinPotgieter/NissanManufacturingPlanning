@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class Plant : Form
+    public partial class PlantForm : Form
     {
-        public Plant()
+        public PlantForm()
         {
             InitializeComponent();
         }
@@ -58,7 +58,7 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            Plants.ActiveForm.Show();
+            PlantsForm.ActiveForm.Show();
             this.Close();
         }
     }

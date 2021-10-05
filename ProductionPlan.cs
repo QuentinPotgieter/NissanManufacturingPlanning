@@ -39,7 +39,7 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            Main.ActiveForm.Show();
+            MainForm.ActiveForm.Show();
             this.Close();
         }
     }

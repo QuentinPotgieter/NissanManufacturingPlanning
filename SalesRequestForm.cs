@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class SalesRequest : Form
+    public partial class SalesRequestForm : Form
     {
-        public SalesRequest()
+        public SalesRequestForm()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace NissanManufacturingPlanning
             decimal quantity = numQuantity.Value;
             string derivative = cbbDerivative.SelectedIndex.ToString();
 
-            Main.ActiveForm.Show();
+            MainForm.ActiveForm.Show();
             this.Close();
         }
 

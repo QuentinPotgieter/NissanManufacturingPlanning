@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -92,37 +92,37 @@ namespace NissanManufacturingPlanning
 
         private void managePlantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Plants plants = new Plants();
+            PlantsForm plants = new PlantsForm();
             plants.ShowDialog();
         }
 
         private void modelsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Models models = new Models();
+            ModelsForm models = new ModelsForm();
             models.ShowDialog();
         }
 
         private void derivativesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Derivatives derivatives = new Derivatives();
+            DerivativesForm derivatives = new DerivativesForm();
             derivatives.ShowDialog();
         }
 
         private void colorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Colors colors = new Colors();
+            ColorsForm colors = new ColorsForm();
             colors.ShowDialog();
         }
 
         private void motorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Motors motors = new Motors();
+            MotorsForm motors = new MotorsForm();
             motors.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SalesRequest salesRequest = new SalesRequest();
+            SalesRequestForm salesRequest = new SalesRequestForm();
             salesRequest.ShowDialog();
         }
 

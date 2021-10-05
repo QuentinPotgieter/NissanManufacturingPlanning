@@ -1,7 +1,7 @@
 ﻿
 namespace NissanManufacturingPlanning
 {
-    partial class Motors
+    partial class MotorsForm
     {
         /// <summary>
         /// Required designer variable.

@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class Derivatives : Form
+    public partial class DerivativesForm : Form
     {
-        public Derivatives()
+        public DerivativesForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Derivative derivative = new Derivative();
+            DerivativeForm derivative = new DerivativeForm();
             derivative.ShowDialog();
         }
 
         private void Derivatives_Shown(object sender, EventArgs e)
         {
-            new Main().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
+            new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
         }
     }
 }
