@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Country.cs" />
+    <Compile Include="Classes\Derivative.cs" />
+    <Compile Include="Classes\SalesRequest.cs" />
+    <Compile Include="Classes\Vehicle.cs" />
     <Compile Include="Classes\VehicleColor.cs" />
     <Compile Include="ColorForm.cs">
       <SubType>Form</SubType>
