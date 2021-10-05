@@ -11,20 +11,13 @@ namespace NissanManufacturingPlanning.Classes
         private bool electricWindows, automaticGearbox, sunRoof, leatherSeats;
         private int modelId, colorId;
 
-        public Derivative()
-        {
-            new Derivative(0, 0, false, false, false, false);
-        }
-
-        public Derivative(int modelId, int colorId, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats)
+        public Derivative(int modelId, string name, int colorId, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats)
         {
             setDerivative(colorId, modelId, electricWindows, automaticGearbox, sunRoof, leatherSeats);
         }
 
-        public Derivative(int id, String name, int modelID, int color, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats)
+        public Derivative(int id, String name, int modelID, int color, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats) : base(name)
         {
-            //super(id, name);
-            //base();
             setDerivative(color, modelID, electricWindows, automaticGearbox, sunRoof, leatherSeats);
         }
 

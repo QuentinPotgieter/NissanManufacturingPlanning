@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NissanManufacturingPlanning.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace NissanManufacturingPlanning
 {
     public partial class DerivativeForm : Form
     {
+
+        Derivative derivative;
         public DerivativeForm()
         {
             InitializeComponent();
@@ -39,6 +42,9 @@ namespace NissanManufacturingPlanning
                 MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
                 return;
             }
+
+            // TODO:
+            // derivative = new Derivative(modelId, name, color, electricwindows, autogearbox, sunroof, leather);
 
             new MainForm().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats)" +
                                  " VALUES ("+
