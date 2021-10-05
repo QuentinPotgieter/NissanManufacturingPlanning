@@ -25,6 +25,8 @@ namespace NissanManufacturingPlanning
             decimal uptime = numUptime.Value;
             decimal duration = numDuration.Value;
 
+            //Load plants into combobox
+
             //input validation
             if (name == null)
             {
@@ -36,11 +38,6 @@ namespace NissanManufacturingPlanning
                 MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
                 return;
             }
-        }
-
-        private void ProductionPlan_Load(object sender, EventArgs e)
-        {
-            //load plants into combobox
         }
     }
 }

@@ -162,7 +162,6 @@ namespace NissanManufacturingPlanning
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Derivative";
             this.Text = "Derivative";
-            this.Load += new System.EventHandler(this.Derivative_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

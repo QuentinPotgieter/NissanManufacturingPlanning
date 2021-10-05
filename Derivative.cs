@@ -40,12 +40,5 @@ namespace NissanManufacturingPlanning
                 return;
             }
         }
-
-        private void Derivative_Load(object sender, EventArgs e)
-        {
-            //Load color into combobox
-            //Load motor into combobox
-            //Load model into combobox
-        }
     }
 }
