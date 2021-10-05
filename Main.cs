@@ -68,5 +68,10 @@ namespace NissanManufacturingPlanning
         {
 
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            //Fill datagrids
+        }
     }
 }

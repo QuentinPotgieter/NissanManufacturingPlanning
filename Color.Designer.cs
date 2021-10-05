@@ -30,45 +30,51 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxName = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Controls.Add(this.tbxName);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(474, 124);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(237, 64);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Color";
             // 
-            // button1
+            // tbxName
             // 
-            this.button1.Location = new System.Drawing.Point(289, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 55);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tbxName.Location = new System.Drawing.Point(8, 25);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.Size = new System.Drawing.Size(220, 20);
+            this.tbxName.TabIndex = 0;
+            this.tbxName.Text = "Name";
             // 
-            // textBox1
+            // btnAdd
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(436, 31);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Name";
+            this.btnAdd.Location = new System.Drawing.Point(144, 85);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(98, 29);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Color
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 240);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(249, 125);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Color";
             this.Text = "Color";
             this.groupBox1.ResumeLayout(false);
@@ -80,7 +86,7 @@ namespace NissanManufacturingPlanning
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbxName;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

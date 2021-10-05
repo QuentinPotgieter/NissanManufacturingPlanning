@@ -30,55 +30,62 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tbxSize = new System.Windows.Forms.TextBox();
+            this.tbxName = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(10, 12);
+            this.groupBox1.Controls.Add(this.tbxSize);
+            this.groupBox1.Controls.Add(this.tbxName);
+            this.groupBox1.Location = new System.Drawing.Point(5, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(498, 188);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(249, 98);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
-            // textBox1
+            // tbxSize
             // 
-            this.textBox1.Location = new System.Drawing.Point(14, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(468, 31);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Name";
+            this.tbxSize.Location = new System.Drawing.Point(7, 60);
+            this.tbxSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxSize.Name = "tbxSize";
+            this.tbxSize.Size = new System.Drawing.Size(236, 20);
+            this.tbxSize.TabIndex = 1;
+            this.tbxSize.Text = "Size";
             // 
-            // textBox2
+            // tbxName
             // 
-            this.textBox2.Location = new System.Drawing.Point(14, 115);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(468, 31);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Size";
+            this.tbxName.Location = new System.Drawing.Point(7, 29);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.Size = new System.Drawing.Size(236, 20);
+            this.tbxName.TabIndex = 0;
+            this.tbxName.Text = "Name";
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(257, 228);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 72);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add/Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(128, 119);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(126, 37);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add/Update";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Motor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 328);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(260, 171);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Motor";
             this.Text = "Motor";
             this.groupBox1.ResumeLayout(false);
@@ -90,8 +97,8 @@ namespace NissanManufacturingPlanning
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbxSize;
+        private System.Windows.Forms.TextBox tbxName;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

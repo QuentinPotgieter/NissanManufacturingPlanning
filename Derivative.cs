@@ -16,5 +16,29 @@ namespace NissanManufacturingPlanning
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string name = tbxName.Text;
+            string color = cbbColor.SelectedIndex.ToString();
+            string motor = cbbMotor.SelectedIndex.ToString();
+            string model = cbbModel.SelectedIndex.ToString();
+            string sunroof = cbSunRoof.ToString();
+            string autogearbox = cbAutomatic.ToString();
+            string electricwindows = cbElectricWindows.ToString();
+            string leather = cbLeather.ToString();
+
+            // Input validation
+            if (name == null)
+            {
+                MessageBox.Show("Please enter a name");
+                return;
+            }
+            if (name.Length > 50)
+            {
+                MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
+                return;
+            }
+        }
     }
 }

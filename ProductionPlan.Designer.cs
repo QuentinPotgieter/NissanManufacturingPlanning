@@ -29,117 +29,174 @@ namespace NissanManufacturingPlanning
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.tbxName = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblDuration = new System.Windows.Forms.Label();
+            this.numDuration = new System.Windows.Forms.NumericUpDown();
+            this.lblUptime = new System.Windows.Forms.Label();
+            this.numUptime = new System.Windows.Forms.NumericUpDown();
+            this.lblRate = new System.Windows.Forms.Label();
+            this.numRate = new System.Windows.Forms.NumericUpDown();
+            this.cbbPlant = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDuration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUptime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRate)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Location = new System.Drawing.Point(12, 288);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(568, 216);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Output";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(17, 159);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(530, 31);
-            this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "Duration (minutes)";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(17, 100);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(530, 31);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.Text = "Uptime (n 0%-100%)";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(17, 42);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(530, 31);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.Text = "Rate (n 0-300)";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 36);
+            this.groupBox1.Controls.Add(this.cbbPlant);
+            this.groupBox1.Controls.Add(this.tbxName);
+            this.groupBox1.Location = new System.Drawing.Point(6, 19);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(568, 166);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(284, 86);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
-            // textBox1
+            // tbxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(530, 31);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Name (optional?)";
+            this.tbxName.Location = new System.Drawing.Point(8, 23);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.Size = new System.Drawing.Size(267, 20);
+            this.tbxName.TabIndex = 0;
+            this.tbxName.Text = "Name (optional?)";
             // 
-            // textBox3
+            // btnAdd
             // 
-            this.textBox3.Location = new System.Drawing.Point(17, 104);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(530, 31);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Plant (Dropdown)";
+            this.btnAdd.Location = new System.Drawing.Point(164, 275);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(126, 31);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "Add Production Plan";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button1
+            // groupBox3
             // 
-            this.button1.Location = new System.Drawing.Point(327, 528);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(253, 60);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Add Production Plan";
-            this.button1.UseVisualStyleBackColor = true;
+            this.groupBox3.Controls.Add(this.lblDuration);
+            this.groupBox3.Controls.Add(this.numDuration);
+            this.groupBox3.Controls.Add(this.lblUptime);
+            this.groupBox3.Controls.Add(this.numUptime);
+            this.groupBox3.Controls.Add(this.lblRate);
+            this.groupBox3.Controls.Add(this.numRate);
+            this.groupBox3.Location = new System.Drawing.Point(6, 119);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(284, 138);
+            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Output";
+            // 
+            // lblDuration
+            // 
+            this.lblDuration.AutoSize = true;
+            this.lblDuration.Location = new System.Drawing.Point(5, 95);
+            this.lblDuration.Name = "lblDuration";
+            this.lblDuration.Size = new System.Drawing.Size(101, 13);
+            this.lblDuration.TabIndex = 5;
+            this.lblDuration.Text = "Duration:   (minutes)";
+            // 
+            // numDuration
+            // 
+            this.numDuration.Location = new System.Drawing.Point(6, 108);
+            this.numDuration.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numDuration.Name = "numDuration";
+            this.numDuration.Size = new System.Drawing.Size(273, 20);
+            this.numDuration.TabIndex = 4;
+            // 
+            // lblUptime
+            // 
+            this.lblUptime.AutoSize = true;
+            this.lblUptime.Location = new System.Drawing.Point(5, 58);
+            this.lblUptime.Name = "lblUptime";
+            this.lblUptime.Size = new System.Drawing.Size(93, 13);
+            this.lblUptime.TabIndex = 3;
+            this.lblUptime.Text = "Uptime:   (0-100%)";
+            // 
+            // numUptime
+            // 
+            this.numUptime.Location = new System.Drawing.Point(6, 71);
+            this.numUptime.Name = "numUptime";
+            this.numUptime.Size = new System.Drawing.Size(273, 20);
+            this.numUptime.TabIndex = 2;
+            // 
+            // lblRate
+            // 
+            this.lblRate.AutoSize = true;
+            this.lblRate.Location = new System.Drawing.Point(5, 21);
+            this.lblRate.Name = "lblRate";
+            this.lblRate.Size = new System.Drawing.Size(75, 13);
+            this.lblRate.TabIndex = 1;
+            this.lblRate.Text = "Rate:   (0-300)";
+            // 
+            // numRate
+            // 
+            this.numRate.Location = new System.Drawing.Point(6, 34);
+            this.numRate.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.numRate.Name = "numRate";
+            this.numRate.Size = new System.Drawing.Size(273, 20);
+            this.numRate.TabIndex = 0;
+            // 
+            // cbbPlant
+            // 
+            this.cbbPlant.FormattingEnabled = true;
+            this.cbbPlant.Location = new System.Drawing.Point(8, 53);
+            this.cbbPlant.Name = "cbbPlant";
+            this.cbbPlant.Size = new System.Drawing.Size(267, 21);
+            this.cbbPlant.TabIndex = 3;
+            this.cbbPlant.Text = "Plant";
             // 
             // ProductionPlan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 614);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(303, 319);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ProductionPlan";
             this.Text = "Production Plan";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDuration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUptime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numRate)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbxName;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lblDuration;
+        private System.Windows.Forms.NumericUpDown numDuration;
+        private System.Windows.Forms.Label lblUptime;
+        private System.Windows.Forms.NumericUpDown numUptime;
+        private System.Windows.Forms.Label lblRate;
+        private System.Windows.Forms.NumericUpDown numRate;
+        private System.Windows.Forms.ComboBox cbbPlant;
     }
 }

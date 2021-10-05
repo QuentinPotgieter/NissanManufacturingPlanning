@@ -30,123 +30,136 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cbbModel = new System.Windows.Forms.ComboBox();
+            this.cbbMotor = new System.Windows.Forms.ComboBox();
+            this.cbbColor = new System.Windows.Forms.ComboBox();
+            this.cbLeather = new System.Windows.Forms.CheckBox();
+            this.cbElectricWindows = new System.Windows.Forms.CheckBox();
+            this.cbAutomatic = new System.Windows.Forms.CheckBox();
+            this.cbSunRoof = new System.Windows.Forms.CheckBox();
+            this.tbxName = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 22);
+            this.groupBox1.Controls.Add(this.cbbModel);
+            this.groupBox1.Controls.Add(this.cbbMotor);
+            this.groupBox1.Controls.Add(this.cbbColor);
+            this.groupBox1.Controls.Add(this.cbLeather);
+            this.groupBox1.Controls.Add(this.cbElectricWindows);
+            this.groupBox1.Controls.Add(this.cbAutomatic);
+            this.groupBox1.Controls.Add(this.cbSunRoof);
+            this.groupBox1.Controls.Add(this.tbxName);
+            this.groupBox1.Location = new System.Drawing.Point(6, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(575, 478);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(288, 249);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Derivative";
             // 
-            // textBox2
+            // cbbModel
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(546, 31);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Color (Dropdown)";
+            this.cbbModel.FormattingEnabled = true;
+            this.cbbModel.Location = new System.Drawing.Point(7, 114);
+            this.cbbModel.Name = "cbbModel";
+            this.cbbModel.Size = new System.Drawing.Size(274, 21);
+            this.cbbModel.TabIndex = 11;
+            this.cbbModel.Text = "Model";
             // 
-            // textBox1
+            // cbbMotor
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(546, 31);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Name";
+            this.cbbMotor.FormattingEnabled = true;
+            this.cbbMotor.Location = new System.Drawing.Point(7, 85);
+            this.cbbMotor.Name = "cbbMotor";
+            this.cbbMotor.Size = new System.Drawing.Size(274, 21);
+            this.cbbMotor.TabIndex = 10;
+            this.cbbMotor.Text = "Motor";
             // 
-            // textBox3
+            // cbbColor
             // 
-            this.textBox3.Location = new System.Drawing.Point(14, 165);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(546, 31);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Motor (Dropdown)";
+            this.cbbColor.FormattingEnabled = true;
+            this.cbbColor.Location = new System.Drawing.Point(7, 54);
+            this.cbbColor.Name = "cbbColor";
+            this.cbbColor.Size = new System.Drawing.Size(274, 21);
+            this.cbbColor.TabIndex = 9;
+            this.cbbColor.Text = "Color";
             // 
-            // checkBox1
+            // cbLeather
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(14, 266);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(133, 29);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Sun Roof";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbLeather.AutoSize = true;
+            this.cbLeather.Location = new System.Drawing.Point(7, 222);
+            this.cbLeather.Margin = new System.Windows.Forms.Padding(2);
+            this.cbLeather.Name = "cbLeather";
+            this.cbLeather.Size = new System.Drawing.Size(92, 17);
+            this.cbLeather.TabIndex = 7;
+            this.cbLeather.Text = "Leather Seats";
+            this.cbLeather.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbElectricWindows
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(14, 320);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(227, 29);
-            this.checkBox2.TabIndex = 4;
-            this.checkBox2.Text = "Automatic Gearbox";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbElectricWindows.AutoSize = true;
+            this.cbElectricWindows.Location = new System.Drawing.Point(7, 193);
+            this.cbElectricWindows.Margin = new System.Windows.Forms.Padding(2);
+            this.cbElectricWindows.Name = "cbElectricWindows";
+            this.cbElectricWindows.Size = new System.Drawing.Size(108, 17);
+            this.cbElectricWindows.TabIndex = 6;
+            this.cbElectricWindows.Text = "Electric Windows";
+            this.cbElectricWindows.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // cbAutomatic
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(14, 372);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(208, 29);
-            this.checkBox4.TabIndex = 6;
-            this.checkBox4.Text = "Electric Windows";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbAutomatic.AutoSize = true;
+            this.cbAutomatic.Location = new System.Drawing.Point(7, 166);
+            this.cbAutomatic.Margin = new System.Windows.Forms.Padding(2);
+            this.cbAutomatic.Name = "cbAutomatic";
+            this.cbAutomatic.Size = new System.Drawing.Size(116, 17);
+            this.cbAutomatic.TabIndex = 4;
+            this.cbAutomatic.Text = "Automatic Gearbox";
+            this.cbAutomatic.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // cbSunRoof
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(14, 426);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(178, 29);
-            this.checkBox5.TabIndex = 7;
-            this.checkBox5.Text = "Leather Seats";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbSunRoof.AutoSize = true;
+            this.cbSunRoof.Location = new System.Drawing.Point(7, 138);
+            this.cbSunRoof.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSunRoof.Name = "cbSunRoof";
+            this.cbSunRoof.Size = new System.Drawing.Size(71, 17);
+            this.cbSunRoof.TabIndex = 3;
+            this.cbSunRoof.Text = "Sun Roof";
+            this.cbSunRoof.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // tbxName
             // 
-            this.button1.Location = new System.Drawing.Point(295, 522);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(293, 62);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add/Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tbxName.Location = new System.Drawing.Point(6, 23);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxName.Name = "tbxName";
+            this.tbxName.Size = new System.Drawing.Size(275, 20);
+            this.tbxName.TabIndex = 0;
+            this.tbxName.Text = "Name";
             // 
-            // textBox4
+            // btnAdd
             // 
-            this.textBox4.Location = new System.Drawing.Point(14, 224);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(546, 31);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "Model (Dropdown)";
+            this.btnAdd.Location = new System.Drawing.Point(148, 271);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(146, 32);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add/Update";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Derivative
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 604);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(300, 314);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Derivative";
             this.Text = "Derivative";
             this.groupBox1.ResumeLayout(false);
@@ -158,14 +171,14 @@ namespace NissanManufacturingPlanning
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbxName;
+        private System.Windows.Forms.CheckBox cbLeather;
+        private System.Windows.Forms.CheckBox cbElectricWindows;
+        private System.Windows.Forms.CheckBox cbAutomatic;
+        private System.Windows.Forms.CheckBox cbSunRoof;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox cbbMotor;
+        private System.Windows.Forms.ComboBox cbbColor;
+        private System.Windows.Forms.ComboBox cbbModel;
     }
 }

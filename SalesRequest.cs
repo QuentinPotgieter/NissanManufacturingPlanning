@@ -16,5 +16,14 @@ namespace NissanManufacturingPlanning
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            DateTime date = dateRequired.Value;
+            decimal quantity = numQuantity.Value;
+            string derivative = cbbDerivative.SelectedIndex.ToString();
+
+            //load derivatives into combobox
+        }
     }
 }
