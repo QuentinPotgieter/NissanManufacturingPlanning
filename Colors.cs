@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace NissanManufacturingPlanning
 {
@@ -17,34 +16,6 @@ namespace NissanManufacturingPlanning
         {
             InitializeComponent();
         }
-        //SQL Connection
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-41A65K6;Initial Catalog=NissanManufacturingDB;Integrated Security=True");
-        SqlCommand comm;
-        SqlDataAdapter adap;
-        DataSet ds;
-
-        public void QuerySelectAll(string table, DataGridView dgv)
-        {
-            try
-            {
-                conn.Open();
-                adap = new SqlDataAdapter();
-                ds = new DataSet();
-                string query = "SELECT * FROM " + table;
-                comm = new SqlCommand(query, conn);
-                adap.SelectCommand = comm;
-                adap.Fill(ds, "SourceTable");
-
-                dgv.DataSource = ds;
-                dgv.DataMember = "SourceTable";
-
-                conn.Close();
-            }
-            catch (SqlException error)
-            {
-                MessageBox.Show(error.Message);
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -52,14 +23,9 @@ namespace NissanManufacturingPlanning
             color.ShowDialog();
         }
 
-        private void Colors_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Colors_Shown(object sender, EventArgs e)
         {
-            QuerySelectAll("Colors", dgvColors);
+            new Main().QuerySelectAll("Colors", dgvColors);
         }
     }
 }

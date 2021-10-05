@@ -18,7 +18,6 @@ namespace NissanManufacturingPlanning
             InitializeComponent();
         }
         //SQL Connection
-        string conStr = @"Data Source=DESKTOP-41A65K6;Initial Catalog=NissanManufacturingDB;Integrated Security=True";
         SqlConnection conn;
         SqlCommand comm;
         SqlDataAdapter adap;
@@ -28,6 +27,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
+                conn = new SqlConnection(@"Data Source=DESKTOP-41A65K6;Initial Catalog=NissanManufacturingDB;Integrated Security=True");
                 conn.Open();
                 adap = new SqlDataAdapter();
                 ds = new DataSet();
@@ -49,8 +49,7 @@ namespace NissanManufacturingPlanning
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-            
+            this.Close();            
         }
 
         private void managePlantsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,32 +94,11 @@ namespace NissanManufacturingPlanning
             productionPlan.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-            //Fill datagrids
-        }
-
         private void Main_Shown(object sender, EventArgs e)
         {
-            //connect to database and test connection
-            try
-            {
-                conn = new SqlConnection(conStr);
-                conn.Open();
-                conn.Close();
-            }
-            catch (SqlException error)
-            {
-                MessageBox.Show(error.Message);
-            }
-
             QuerySelectAll("SalesRequest", dgvSalesRequests);
             QuerySelectAll("ProductionPlan", dgvProductionOutput);
         }
+
     }
 }

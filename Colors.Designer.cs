@@ -95,7 +95,6 @@ namespace NissanManufacturingPlanning
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Colors";
             this.Text = "Colors";
-            this.Load += new System.EventHandler(this.Colors_Load);
             this.Shown += new System.EventHandler(this.Colors_Shown);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).EndInit();

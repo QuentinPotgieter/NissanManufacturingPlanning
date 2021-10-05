@@ -163,7 +163,6 @@ namespace NissanManufacturingPlanning
             this.button1.TabIndex = 2;
             this.button1.Text = "Link";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menuStrip1
             // 
@@ -268,7 +267,6 @@ namespace NissanManufacturingPlanning
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.Text = "Nissan Production Planning";
-            this.Load += new System.EventHandler(this.Main_Load);
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesRequests)).EndInit();
