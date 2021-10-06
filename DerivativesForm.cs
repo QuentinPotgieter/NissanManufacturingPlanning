@@ -29,5 +29,16 @@ namespace NissanManufacturingPlanning
         {
             new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string name = dgvVehicleDerivative.Rows[dgvVehicleDerivative.SelectedCells[0].RowIndex].Cells["Name"].Value.ToString();
+            string index = dgvVehicleDerivative.Rows[dgvVehicleDerivative.SelectedCells[0].RowIndex].Cells["DerivativeID"].Value.ToString();
+            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                new MainForm().SqlDelete("DELETE FROM VehicleDerivative WHERE Derivative = " + index);
+            }
+            new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
+        }
     }
 }

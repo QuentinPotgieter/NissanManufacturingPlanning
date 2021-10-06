@@ -21,7 +21,7 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string mType = cbbType.SelectedItem.ToString();
+            string mType = cbbType.Text;
             string description = tbxDesc.Text;
             int size = Convert.ToInt32(numSize.Value);
 

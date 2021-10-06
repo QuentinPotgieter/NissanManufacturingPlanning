@@ -9,14 +9,14 @@ namespace NissanManufacturingPlanning.Classes
     public class Motor
     {
         public int size;
-        public String description, motorType;
+        public string description, motorType;
 
-        public Motor(int size, String motorType, String description)
+        public Motor(int size, string motorType, string description)
         {
             this.setMotor(size, motorType, description);
         }
 
-        private void setMotor(int size, String motorType, String description)
+        private void setMotor(int size, string motorType, string description)
         {
             this.size = size;
             this.motorType = motorType;
@@ -28,12 +28,12 @@ namespace NissanManufacturingPlanning.Classes
             return this.size;
         }
 
-        public String getMotorType()
+        public string getMotorType()
         {
             return this.motorType;
         }
 
-        public String getDescription()
+        public string getDescription()
         {
             return this.description;
         }

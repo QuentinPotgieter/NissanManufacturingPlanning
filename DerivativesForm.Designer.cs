@@ -60,6 +60,7 @@ namespace NissanManufacturingPlanning
             this.button2.TabIndex = 2;
             this.button2.Text = "Remove Derivative";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -86,14 +87,14 @@ namespace NissanManufacturingPlanning
             this.dgvVehicleDerivative.Size = new System.Drawing.Size(681, 486);
             this.dgvVehicleDerivative.TabIndex = 0;
             // 
-            // Derivatives
+            // DerivativesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 546);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Derivatives";
+            this.Name = "DerivativesForm";
             this.Text = "Derivatives";
             this.Shown += new System.EventHandler(this.Derivatives_Shown);
             this.groupBox1.ResumeLayout(false);
