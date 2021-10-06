@@ -8,26 +8,26 @@ namespace NissanManufacturingPlanning.Classes
 {
     class Model : Vehicle
     {
-        private ModelType modelType;
+        private string modelType;
         private int motorId;
         private int year;
 
-        private Model(ModelType modelType, int motorId, int year) {
+        private Model(string modelType, int motorId, int year) {
             setModel(modelType, motorId, year);
         }
 
-        public Model(ModelType modelType, int motorId, int year, int Id, String Name) : base(Name)
+        public Model(string modelType, int motorId, int year, int Id, String Name) : base(Name)
         {
             setModel(modelType, motorId, year);
         }
 
-        private void setModel(ModelType modelType, int motorId, int year) {
+        private void setModel(string modelType, int motorId, int year) {
             this.modelType = modelType;
             this.motorId = motorId;
             this.year = year;
         }
 
-        private ModelType getTypeId() {
+        private string getTypeId() {
             return modelType;
         }
 
