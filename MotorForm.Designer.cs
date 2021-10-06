@@ -30,12 +30,12 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbxDesc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblSize = new System.Windows.Forms.Label();
             this.numSize = new System.Windows.Forms.NumericUpDown();
             this.cbbType = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.tbxDesc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSize)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,13 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
+            // 
+            // tbxDesc
+            // 
+            this.tbxDesc.Location = new System.Drawing.Point(10, 105);
+            this.tbxDesc.Name = "tbxDesc";
+            this.tbxDesc.Size = new System.Drawing.Size(233, 20);
+            this.tbxDesc.TabIndex = 7;
             // 
             // label1
             // 
@@ -77,6 +84,11 @@ namespace NissanManufacturingPlanning
             // numSize
             // 
             this.numSize.Location = new System.Drawing.Point(8, 29);
+            this.numSize.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.numSize.Name = "numSize";
             this.numSize.Size = new System.Drawing.Size(235, 20);
             this.numSize.TabIndex = 3;
@@ -105,13 +117,6 @@ namespace NissanManufacturingPlanning
             this.btnAdd.Text = "Add/Update";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // tbxDesc
-            // 
-            this.tbxDesc.Location = new System.Drawing.Point(10, 105);
-            this.tbxDesc.Name = "tbxDesc";
-            this.tbxDesc.Size = new System.Drawing.Size(233, 20);
-            this.tbxDesc.TabIndex = 7;
             // 
             // MotorForm
             // 

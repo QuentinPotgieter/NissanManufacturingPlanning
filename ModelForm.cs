@@ -42,5 +42,14 @@ namespace NissanManufacturingPlanning
             ModelsForm.ActiveForm.Show();
             this.Close();
         }
+
+        private void ModelForm_Shown(object sender, EventArgs e)
+        {
+            List<string> motor = new MainForm().FillComboBox("SELECT * FROM Motor", cbbMotor);
+            for (int i = 0; i < motor.Count; i++)
+            {
+                cbbMotor.Items.Add(motor[i]);
+            }
+        }
     }
 }

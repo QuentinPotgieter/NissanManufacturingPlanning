@@ -30,11 +30,11 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbbMotor = new System.Windows.Forms.ComboBox();
             this.numYear = new System.Windows.Forms.NumericUpDown();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.cbbMotor = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,23 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Motor:";
+            // 
+            // cbbMotor
+            // 
+            this.cbbMotor.FormattingEnabled = true;
+            this.cbbMotor.Location = new System.Drawing.Point(10, 92);
+            this.cbbMotor.Name = "cbbMotor";
+            this.cbbMotor.Size = new System.Drawing.Size(259, 21);
+            this.cbbMotor.TabIndex = 3;
             // 
             // numYear
             // 
@@ -96,23 +113,6 @@ namespace NissanManufacturingPlanning
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // cbbMotor
-            // 
-            this.cbbMotor.FormattingEnabled = true;
-            this.cbbMotor.Location = new System.Drawing.Point(10, 92);
-            this.cbbMotor.Name = "cbbMotor";
-            this.cbbMotor.Size = new System.Drawing.Size(259, 21);
-            this.cbbMotor.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Motor:";
-            // 
             // ModelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +123,7 @@ namespace NissanManufacturingPlanning
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ModelForm";
             this.Text = "Model";
+            this.Shown += new System.EventHandler(this.ModelForm_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
