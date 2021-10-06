@@ -21,6 +21,8 @@ namespace NissanManufacturingPlanning
         {
             DerivativeForm derivative = new DerivativeForm();
             derivative.ShowDialog();
+
+
         }
 
         private void Derivatives_Shown(object sender, EventArgs e)

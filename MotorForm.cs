@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NissanManufacturingPlanning.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class MotorForm : Form
     {
+        public Motor fMotor;
         public MotorForm()
         {
             InitializeComponent();
@@ -19,20 +21,11 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string name = tbxName.Text;
-            string size = tbxSize.Text; //Double check properties for validation
+            string mType = cbbType.SelectedItem.ToString();
+            string description = txtDesc.Text;
+            int size = (int)numSize.Value;
 
-            // Input validation
-            if (name == null)
-            {
-                MessageBox.Show("Please enter a name");
-                return;
-            }
-            if (name.Length > 50)
-            {
-                MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
-                return;
-            }
+            fMotor = new Motor(size,mType,description);
 
             MotorsForm.ActiveForm.Show();
             this.Close();

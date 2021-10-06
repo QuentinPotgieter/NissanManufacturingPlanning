@@ -25,7 +25,7 @@ namespace NissanManufacturingPlanning
             string name = tbxName.Text;
             string color = cbbColor.SelectedIndex.ToString();
             string motor = cbbMotor.SelectedIndex.ToString();
-            string model = cbbModel.SelectedIndex.ToString();
+            //int model = cbbModel.SelectedIndex.ToString();
             string sunroof = cbSunRoof.ToString();
             string autogearbox = cbAutomatic.ToString();
             string electricwindows = cbElectricWindows.ToString();
@@ -43,12 +43,12 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            // TODO:
-            // derivative = new Derivative(modelId, name, color, electricwindows, autogearbox, sunroof, leather);
+            
+             //derivative = new Derivative(model, name, color, electricwindows, autogearbox, sunroof, leather);
 
             new MainForm().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats)" +
                                  " VALUES ("+
-                                 new MainForm().QuotedStr(model) + "," +
+                                // new MainForm().QuotedStr(model) + "," +
                                  new MainForm().QuotedStr(name) + "," +
                                  new MainForm().QuotedStr(color) + "," +
                                  electricwindows + "," +

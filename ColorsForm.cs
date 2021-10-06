@@ -23,8 +23,7 @@ namespace NissanManufacturingPlanning
             color.ShowDialog();
 
             new MainForm().SqlInsert("INSERT INTO Colors (Color) VALUES (" +
-                new MainForm().QuotedStr(color.fcolor.getDescription()) +
-            ")");
+                new MainForm().QuotedStr(color.fcolor.getDescription()) + ")");
 
             new MainForm().QuerySelectAll("Colors", dgvColors);
         }

@@ -87,6 +87,7 @@ namespace NissanManufacturingPlanning
             this.button2.TabIndex = 3;
             this.button2.Text = "Update Plant";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -98,14 +99,14 @@ namespace NissanManufacturingPlanning
             this.button3.Text = "Remove Plant";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // Plants
+            // PlantsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1073, 627);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Plants";
+            this.Name = "PlantsForm";
             this.Text = "Plants";
             this.Shown += new System.EventHandler(this.Plants_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlants)).EndInit();

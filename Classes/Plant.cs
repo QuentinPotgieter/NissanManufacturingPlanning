@@ -9,27 +9,38 @@ namespace NissanManufacturingPlanning.Classes
     public class Plant : ProductionProgramme
     {
         private String name;
-        private int countryId;
+        private string country, address;
 
-        public Plant(int id, int rate, int availability, int shiftDuration, String name, int countryId) : base(id, rate, availability, shiftDuration)
+        public Plant(int rate, int availability, int shiftDuration, String name, string country, string address) : base(rate, availability, shiftDuration)
         {
-            setPlant(name, countryId);
+            setPlant(name, country, address);
         }
 
-        private void setPlant(String name, int countryId)
+        private void setPlant(String name, string country, string address)
         {
             this.name = name;
-            this.countryId = countryId;
+            this.country = country;
+            this.address = address;
         }
 
-        private String getName()
+        public String getName()
         {
             return name;
         }
 
-        private int getCountryId()
+        public string getCountryId()
         {
-            return countryId;
+            return country;
+        }
+
+        public string getAddress()
+        {
+            return address;
+        }
+
+        public string getDescription()
+        {
+            return "'"+getName()+"','"+getCountryId()+"','"+getAddress() + "'," + getRate().ToString() + "," + getAvailablity().ToString() + "," + getShiftDuration().ToString();
         }
 
         public override bool canProduce(int output)

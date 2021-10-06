@@ -27,5 +27,10 @@ namespace NissanManufacturingPlanning
         {
             new MainForm().QuerySelectAll("Motors", dgvMotors);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 };

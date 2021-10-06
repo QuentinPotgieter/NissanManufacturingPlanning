@@ -6,29 +6,21 @@ using System.Threading.Tasks;
 
 namespace NissanManufacturingPlanning.Classes
 {
-    class Motor
+    public class Motor
     {
-        public int id;
         public int size;
-        public MotorType motorType;
-        public String description;
+        public String description, motorType;
 
-        public Motor(int id, int size, MotorType motorType, String description)
+        public Motor(int size, String motorType, String description)
         {
-            this.setMotor(id, size, motorType, description);
+            this.setMotor(size, motorType, description);
         }
 
-        private void setMotor(int id, int size, MotorType motorType, String description)
+        private void setMotor(int size, String motorType, String description)
         {
-            this.id = id;
             this.size = size;
             this.motorType = motorType;
             this.description = description;
-        }
-
-        public int getId()
-        {
-            return this.id;
         }
 
         public int getSize()
@@ -36,7 +28,7 @@ namespace NissanManufacturingPlanning.Classes
             return this.size;
         }
 
-        public MotorType getMotorType()
+        public String getMotorType()
         {
             return this.motorType;
         }

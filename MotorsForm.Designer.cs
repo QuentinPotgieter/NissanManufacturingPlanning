@@ -50,6 +50,7 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "All Motors";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button2
             // 
@@ -86,14 +87,14 @@ namespace NissanManufacturingPlanning
             this.dgvMotors.Size = new System.Drawing.Size(499, 460);
             this.dgvMotors.TabIndex = 0;
             // 
-            // Motors
+            // MotorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 526);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Motors";
+            this.Name = "MotorsForm";
             this.Text = "Motors";
             this.Shown += new System.EventHandler(this.Motors_Shown);
             this.groupBox1.ResumeLayout(false);

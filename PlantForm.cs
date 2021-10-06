@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NissanManufacturingPlanning.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class PlantForm : Form
     {
+        public Plant fPlant;
         public PlantForm()
         {
             InitializeComponent();
@@ -22,9 +24,9 @@ namespace NissanManufacturingPlanning
             string name = tbxName.Text;
             string country = tbxCountry.Text;
             string address = tbxAddress.Text;
-            decimal rate = numRate.Value;
-            decimal uptime = numUptime.Value;
-            decimal duration = numDuration.Value;
+            int rate = (int)numRate.Value;
+            int uptime = (int)numUptime.Value;
+            int duration = (int)numDuration.Value;
 
             // Input validation
             if (name == null)
@@ -57,6 +59,8 @@ namespace NissanManufacturingPlanning
                 MessageBox.Show("The address you have entered is too long (Max 50 Characters)");
                 return;
             }
+
+            fPlant = new Plant(rate,uptime,duration,name,country, address);
 
             PlantsForm.ActiveForm.Show();
             this.Close();

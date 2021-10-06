@@ -85,6 +85,26 @@ namespace NissanManufacturingPlanning
             return ("'" + S.Replace("'", "''") + "'");
         }
 
+        public void SqlUpdate(string query)
+        {
+            try
+            {
+                conn = new SqlConnection(@"Data Source=DESKTOP-41A65K6;Initial Catalog=NissanManufacturingDB;Integrated Security=True");
+                conn.Open();
+
+                adap = new SqlDataAdapter();
+                comm = new SqlCommand(query, conn);
+                adap.UpdateCommand = comm;
+                adap.UpdateCommand.ExecuteNonQuery();
+
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();            

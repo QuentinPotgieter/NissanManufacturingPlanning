@@ -49,7 +49,6 @@
     <Compile Include="Classes\Country.cs" />
     <Compile Include="Classes\Derivative.cs" />
     <Compile Include="Classes\Model.cs" />
-    <Compile Include="Classes\ModelType.cs" />
     <Compile Include="Classes\Motor.cs" />
     <Compile Include="Classes\MotorType.cs" />
     <Compile Include="Classes\Plant.cs" />
