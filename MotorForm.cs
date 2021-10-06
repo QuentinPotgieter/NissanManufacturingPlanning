@@ -23,7 +23,7 @@ namespace NissanManufacturingPlanning
         {
             string mType = cbbType.SelectedItem.ToString();
             string description = txtDesc.Text;
-            int size = (int)numSize.Value;
+            int size = Convert.ToInt32(numSize.Value);
 
             fMotor = new Motor(size,mType,description);
 

@@ -60,6 +60,7 @@ namespace NissanManufacturingPlanning
             this.button3.TabIndex = 3;
             this.button3.Text = "Remove Color";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -86,14 +87,14 @@ namespace NissanManufacturingPlanning
             this.dgvColors.Size = new System.Drawing.Size(546, 458);
             this.dgvColors.TabIndex = 0;
             // 
-            // Colors
+            // ColorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(740, 529);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Colors";
+            this.Name = "ColorsForm";
             this.Text = "Colors";
             this.Shown += new System.EventHandler(this.Colors_Shown);
             this.groupBox1.ResumeLayout(false);

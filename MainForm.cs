@@ -27,7 +27,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-41A65K6;Initial Catalog=NissanManufacturingDB;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\Source\Repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
                 adap = new SqlDataAdapter();
                 ds = new DataSet();
@@ -59,7 +59,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-41A65K6;Initial Catalog=NissanManufacturingDB;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\Source\Repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
@@ -89,13 +89,33 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=DESKTOP-41A65K6;Initial Catalog=NissanManufacturingDB;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\Source\Repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
                 comm = new SqlCommand(query, conn);
                 adap.UpdateCommand = comm;
                 adap.UpdateCommand.ExecuteNonQuery();
+
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        public void SqlDelete(string query)
+        {
+            try
+            {
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\Source\Repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn.Open();
+
+                adap = new SqlDataAdapter();
+                comm = new SqlCommand(query, conn);
+                adap.DeleteCommand = comm;
+                adap.DeleteCommand.ExecuteNonQuery();
 
                 conn.Close();
             }

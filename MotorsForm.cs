@@ -21,11 +21,16 @@ namespace NissanManufacturingPlanning
         {
             MotorForm motor = new MotorForm();
             motor.ShowDialog();
+
+            //Weird error
+            new MainForm().SqlInsert("INSERT INTO Motor (Size, Type, Description) VALUES ("+motor.fMotor.getSize().ToString()+",'"+ motor.fMotor.GetType()+"','"+ motor.fMotor.getDescription()+ "')");
+
+            new MainForm().QuerySelectAll("Motor", dgvMotors);
         }
 
         private void Motors_Shown(object sender, EventArgs e)
         {
-            new MainForm().QuerySelectAll("Motors", dgvMotors);
+            new MainForm().QuerySelectAll("Motor", dgvMotors);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

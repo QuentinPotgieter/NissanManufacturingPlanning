@@ -38,10 +38,21 @@ namespace NissanManufacturingPlanning
             PlantForm plant = new PlantForm();
             plant.ShowDialog();
 
-            string index = dgvPlants.SelectedRows[0].Cells[1].Value.ToString();
+            string index = dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["PlantID"].Value.ToString();
 
             new MainForm().SqlUpdate("UPDATE Plant SET Name = '"+plant.fPlant.getName()+"', Country = '"+plant.fPlant.getCountryId()+"', Address = '"+plant.fPlant.getAddress()+"', Rate = "+plant.fPlant.getRate().ToString()+", Uptime = "+ plant.fPlant.getAvailablity().ToString()+", ShiftDuration = "+plant.fPlant.getShiftDuration().ToString()+" WHERE PlantID = '"+index+"'");
 
+            new MainForm().QuerySelectAll("Plant", dgvPlants);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string name = dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["Name"].Value.ToString();
+            string index = dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["PlantID"].Value.ToString();
+            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete "+name+"?","Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                new MainForm().SqlDelete("DELETE FROM Plant WHERE PlantID = "+index);
+            }
             new MainForm().QuerySelectAll("Plant", dgvPlants);
         }
     }
