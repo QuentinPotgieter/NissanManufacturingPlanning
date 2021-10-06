@@ -225,5 +225,25 @@ namespace NissanManufacturingPlanning
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string name = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestsID"].Value.ToString();
+            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                new MainForm().SqlDelete("DELETE FROM SalesRequest WHERE SalesRequestID = " + name);
+            }
+            new MainForm().QuerySelectAll("SalesRequest", dgvSalesRequests);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string name = dgvProductionOutput.Rows[dgvProductionOutput.SelectedCells[0].RowIndex].Cells["PlanID"].Value.ToString();
+            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                new MainForm().SqlDelete("DELETE FROM ProductionPlan WHERE PlanID = " + name);
+            }
+            new MainForm().QuerySelectAll("ProductionPlan", dgvProductionOutput);
+        }
     }
 }

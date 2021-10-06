@@ -79,6 +79,7 @@ namespace NissanManufacturingPlanning
             this.button4.TabIndex = 6;
             this.button4.Text = "Remove Sales Request";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -128,6 +129,7 @@ namespace NissanManufacturingPlanning
             this.button3.TabIndex = 8;
             this.button3.Text = "Remove Production Plan";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -255,7 +257,7 @@ namespace NissanManufacturingPlanning
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 22);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
-            // Main
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,7 +268,7 @@ namespace NissanManufacturingPlanning
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Main";
+            this.Name = "MainForm";
             this.Text = "Nissan Production Planning";
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.groupBox1.ResumeLayout(false);
