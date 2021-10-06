@@ -22,7 +22,9 @@ namespace NissanManufacturingPlanning
             DerivativeForm derivative = new DerivativeForm();
             derivative.ShowDialog();
 
-            new MainForm().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats) VALUES ("+derivative.derivative.getModelId().ToString()+",'"+ derivative.derivative.getName()+"','"+ derivative.derivative.getColorId()+"',"+ derivative.derivative.isElectricWindows().ToString()+","+ derivative.derivative.isAutomaticGearbox()+","+derivative.derivative.isSunRoof()+","+ derivative.derivative.isLeatherSeats()+")");
+            new MainForm().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats) VALUES ("+derivative.derivative.getModelId().ToString()+",'"+ derivative.derivative.getName()+"','"+ derivative.derivative.getColorId()+"',"+ derivative.derivative.isElectricWindows().ToString()+","+ derivative.derivative.isAutomaticGearbox().ToString()+","+derivative.derivative.isSunRoof().ToString() + ","+ derivative.derivative.isLeatherSeats().ToString() + ")");
+
+            new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
         }
 
         private void Derivatives_Shown(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace NissanManufacturingPlanning
             string index = dgvVehicleDerivative.Rows[dgvVehicleDerivative.SelectedCells[0].RowIndex].Cells["DerivativeID"].Value.ToString();
             if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                new MainForm().SqlDelete("DELETE FROM VehicleDerivative WHERE Derivative = " + index);
+                new MainForm().SqlDelete("DELETE FROM VehicleDerivative WHERE DerivativeID = " + index);
             }
             new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
         }

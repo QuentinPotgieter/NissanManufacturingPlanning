@@ -32,24 +32,24 @@ namespace NissanManufacturingPlanning.Classes
             this.leatherSeats = leatherSeats;
         }
 
-        public bool isElectricWindows()
+        public int isElectricWindows()
         {
-            return electricWindows;
+            if (electricWindows) return 1; else return 0;
         }
 
-        public bool isAutomaticGearbox()
+        public int isAutomaticGearbox()
         {
-            return automaticGearbox;
+            if (automaticGearbox) return 1; else return 0;
         }
 
-        public bool isSunRoof()
+        public int isSunRoof()
         {
-            return sunRoof;
+            if (sunRoof) return 1; else return 0;
         }
 
-        public bool isLeatherSeats()
+        public int isLeatherSeats()
         {
-            return leatherSeats;
+            if (leatherSeats) return 1; else return 0;
         }
 
         public string getColorId()

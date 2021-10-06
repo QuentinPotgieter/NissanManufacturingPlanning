@@ -45,6 +45,7 @@ namespace NissanManufacturingPlanning
 
             
             derivative = new Derivative(model, name, color, electricwindows, autogearbox, sunroof, leather);
+            derivative.setName(name);
 
             DerivativesForm.ActiveForm.Show();
             this.Close();

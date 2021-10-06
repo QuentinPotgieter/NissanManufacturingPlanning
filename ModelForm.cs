@@ -23,8 +23,7 @@ namespace NissanManufacturingPlanning
         {
             string name = tbxName.Text;
             int year = Convert.ToInt32(numYear.Value);
-            String motortype = cbbMotor.Text;
-            int motor = Int32.Parse(motortype);
+            int motor = Convert.ToInt32(cbbMotor.Text);
 
             // Input validation
             if (name == null)
@@ -40,8 +39,8 @@ namespace NissanManufacturingPlanning
 
             fmodel = new Model(name,motor,year);
 
-
-         
+            
+            ModelsForm.ActiveForm.Show();
             this.Close();
         }
 
