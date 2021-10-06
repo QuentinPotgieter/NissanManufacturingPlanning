@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NissanManufacturingPlanning.Classes
 {
-    class Vehicle
+    public class Vehicle
     {
         private String name;
 

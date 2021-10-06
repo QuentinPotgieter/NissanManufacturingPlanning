@@ -22,7 +22,7 @@ namespace NissanManufacturingPlanning
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string mType = cbbType.SelectedItem.ToString();
-            string description = txtDesc.Text;
+            string description = tbxDesc.Text;
             int size = Convert.ToInt32(numSize.Value);
 
             fMotor = new Motor(size,mType,description);

@@ -6,24 +6,25 @@ using System.Threading.Tasks;
 
 namespace NissanManufacturingPlanning.Classes
 {
-    class Derivative : Vehicle
+    public class Derivative : Vehicle
     {
         private bool electricWindows, automaticGearbox, sunRoof, leatherSeats;
-        private int modelId, colorId;
+        private int modelId;
+        string color;
 
-        public Derivative(int modelId, string name, int colorId, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats)
+        public Derivative(int modelId, string name, string color, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats)
         {
-            setDerivative(colorId, modelId, electricWindows, automaticGearbox, sunRoof, leatherSeats);
+            setDerivative(color, modelId, electricWindows, automaticGearbox, sunRoof, leatherSeats);
         }
 
-        public Derivative(int id, String name, int modelID, int color, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats) : base(name)
+        public Derivative(int id, String name, int modelID, string color, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats) : base(name)
         {
             setDerivative(color, modelID, electricWindows, automaticGearbox, sunRoof, leatherSeats);
         }
 
-        private void setDerivative(int colorId, int modelId, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats)
+        private void setDerivative(string color, int modelId, bool electricWindows, bool automaticGearbox, bool sunRoof, bool leatherSeats)
         {
-            this.colorId = colorId;
+            this.color = color;
             this.modelId = modelId;
             this.electricWindows = electricWindows;
             this.automaticGearbox = automaticGearbox;
@@ -31,32 +32,32 @@ namespace NissanManufacturingPlanning.Classes
             this.leatherSeats = leatherSeats;
         }
 
-        private bool isElectricWindows()
+        public bool isElectricWindows()
         {
             return electricWindows;
         }
 
-        private bool isAutomaticGearbox()
+        public bool isAutomaticGearbox()
         {
             return automaticGearbox;
         }
 
-        private bool isSunRoof()
+        public bool isSunRoof()
         {
             return sunRoof;
         }
 
-        private bool isLeatherSeats()
+        public bool isLeatherSeats()
         {
             return leatherSeats;
         }
 
-        private int getColorId()
+        public string getColorId()
         {
-            return colorId;
+            return color;
         }
 
-        private int getModelId()
+        public int getModelId()
         {
             return this.modelId;
         }

@@ -30,6 +30,7 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbPlant = new System.Windows.Forms.ComboBox();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -39,7 +40,6 @@ namespace NissanManufacturingPlanning
             this.numUptime = new System.Windows.Forms.NumericUpDown();
             this.lblRate = new System.Windows.Forms.Label();
             this.numRate = new System.Windows.Forms.NumericUpDown();
-            this.cbbPlant = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDuration)).BeginInit();
@@ -52,18 +52,27 @@ namespace NissanManufacturingPlanning
             this.groupBox1.Controls.Add(this.cbbPlant);
             this.groupBox1.Controls.Add(this.tbxName);
             this.groupBox1.Location = new System.Drawing.Point(6, 19);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(284, 86);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
+            // cbbPlant
+            // 
+            this.cbbPlant.FormattingEnabled = true;
+            this.cbbPlant.Location = new System.Drawing.Point(8, 53);
+            this.cbbPlant.Name = "cbbPlant";
+            this.cbbPlant.Size = new System.Drawing.Size(267, 21);
+            this.cbbPlant.TabIndex = 3;
+            this.cbbPlant.Text = "Plant";
+            // 
             // tbxName
             // 
             this.tbxName.Location = new System.Drawing.Point(8, 23);
-            this.tbxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(2);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(267, 20);
             this.tbxName.TabIndex = 0;
@@ -72,7 +81,7 @@ namespace NissanManufacturingPlanning
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(164, 275);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(126, 31);
             this.btnAdd.TabIndex = 8;
@@ -155,15 +164,6 @@ namespace NissanManufacturingPlanning
             this.numRate.Size = new System.Drawing.Size(273, 20);
             this.numRate.TabIndex = 0;
             // 
-            // cbbPlant
-            // 
-            this.cbbPlant.FormattingEnabled = true;
-            this.cbbPlant.Location = new System.Drawing.Point(8, 53);
-            this.cbbPlant.Name = "cbbPlant";
-            this.cbbPlant.Size = new System.Drawing.Size(267, 21);
-            this.cbbPlant.TabIndex = 3;
-            this.cbbPlant.Text = "Plant";
-            // 
             // ProductionPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,9 +172,10 @@ namespace NissanManufacturingPlanning
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductionPlan";
             this.Text = "Production Plan";
+            this.Shown += new System.EventHandler(this.ProductionPlan_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

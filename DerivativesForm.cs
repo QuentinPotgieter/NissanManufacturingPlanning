@@ -22,7 +22,7 @@ namespace NissanManufacturingPlanning
             DerivativeForm derivative = new DerivativeForm();
             derivative.ShowDialog();
 
-
+            new MainForm().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats) VALUES ("+derivative.derivative.getModelId().ToString()+",'"+ derivative.derivative.getName()+"','"+ derivative.derivative.getColorId()+"',"+ derivative.derivative.isElectricWindows().ToString()+","+ derivative.derivative.isAutomaticGearbox()+","+derivative.derivative.isSunRoof()+","+ derivative.derivative.isLeatherSeats()+")");
         }
 
         private void Derivatives_Shown(object sender, EventArgs e)

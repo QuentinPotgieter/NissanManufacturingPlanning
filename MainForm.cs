@@ -21,6 +21,7 @@ namespace NissanManufacturingPlanning
         SqlConnection conn;
         SqlCommand comm;
         SqlDataAdapter adap;
+        SqlDataReader read;
         DataSet ds;
 
         public void QuerySelectAll(string table, DataGridView dgv)
@@ -47,11 +48,53 @@ namespace NissanManufacturingPlanning
             }
         }
 
-        public List<string> FillComboBox(string query) //Method is to return array used to fill combo box
+        public List<string> FillComboBox(string query, ComboBox cbb) //Method is to return array used to fill combo box
         {
             List<string> list = new List<string>();
-            //run sql select with query param
-            //loop to fill list
+
+            if (cbb.Name == "cbbColor")
+            {
+                try
+                {
+                    conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\Source\Repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                    conn.Open();
+
+                    comm = new SqlCommand(query, conn);
+                    read = comm.ExecuteReader();
+
+                    while (read.Read())
+                    {
+                        cbb.Items.Add(read.GetString(0));
+                    }
+                    conn.Close();
+                }
+                catch (SqlException error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+
+                return list;
+            }
+            
+            try
+            {
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\Source\Repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn.Open();
+
+                comm = new SqlCommand(query, conn);
+                read = comm.ExecuteReader();
+
+                while (read.Read())
+                {
+                    cbb.Items.Add(read.GetInt32(0).ToString());
+                }
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
             return list;
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NissanManufacturingPlanning.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class ModelForm : Form
     {
+        public Model model;
         public ModelForm()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace NissanManufacturingPlanning
         {
             string name = tbxName.Text;
             decimal year = numYear.Value;
+            int motor = Convert.ToInt32(cbbMotor.SelectedItem.ToString());
 
             // Input validation
             if (name == null)
@@ -33,6 +36,8 @@ namespace NissanManufacturingPlanning
                 MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
                 return;
             }
+
+            //model = new Model(name,motor,year);
 
             ModelsForm.ActiveForm.Show();
             this.Close();

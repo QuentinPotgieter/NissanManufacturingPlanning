@@ -25,8 +25,6 @@ namespace NissanManufacturingPlanning
             decimal uptime = numUptime.Value;
             decimal duration = numDuration.Value;
 
-            //Load plants into combobox
-
             //input validation
             if (name == null)
             {
@@ -41,6 +39,16 @@ namespace NissanManufacturingPlanning
 
             MainForm.ActiveForm.Show();
             this.Close();
+        }
+
+        private void ProductionPlan_Shown(object sender, EventArgs e)
+        {
+            //Load into combobox
+            List<string> plant = new MainForm().FillComboBox("SELECT * FROM Plant", cbbPlant);
+            for (int i = 0; i < plant.Count; i++)
+            {
+                cbbPlant.Items.Add(plant[i]);
+            }
         }
     }
 }

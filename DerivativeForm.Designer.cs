@@ -152,7 +152,7 @@ namespace NissanManufacturingPlanning
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // Derivative
+            // DerivativeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,8 +160,9 @@ namespace NissanManufacturingPlanning
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Derivative";
+            this.Name = "DerivativeForm";
             this.Text = "Derivative";
+            this.Shown += new System.EventHandler(this.DerivativeForm_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
