@@ -21,6 +21,7 @@ namespace NissanManufacturingPlanning
         {
             ModelForm model = new ModelForm();
             model.ShowDialog();
+            new MainForm().SqlInsert("INSERT INTO VehicleModel(ModelID,ModelName,ModelYear) VALUES(" + model.fmodel.getTypeId() + ",'" + model.fmodel.getName() + "'," + model.fmodel.getYear() + ")"); 
         }
 
         private void Models_Shown(object sender, EventArgs e)

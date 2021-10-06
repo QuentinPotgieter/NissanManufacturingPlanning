@@ -13,7 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class ModelForm : Form
     {
-        public Model model;
+        public Model fmodel;
         public ModelForm()
         {
             InitializeComponent();
@@ -22,8 +22,9 @@ namespace NissanManufacturingPlanning
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string name = tbxName.Text;
-            decimal year = numYear.Value;
-            int motor = Convert.ToInt32(cbbMotor.SelectedItem.ToString());
+            int year = Convert.ToInt32(numYear.Value);
+            String motortype = cbbMotor.Text;
+            int motor = Int32.Parse(motortype);
 
             // Input validation
             if (name == null)
@@ -37,9 +38,10 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            //model = new Model(name,motor,year);
+            fmodel = new Model(name,motor,year);
 
-            ModelsForm.ActiveForm.Show();
+
+         
             this.Close();
         }
     }

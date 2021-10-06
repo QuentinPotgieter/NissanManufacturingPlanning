@@ -12,7 +12,7 @@ namespace NissanManufacturingPlanning.Classes
         private int motorId;
         private int year;
 
-        private Model(string modelType, int motorId, int year) {
+        public Model(string modelType, int motorId, int year) {
             setModel(modelType, motorId, year);
         }
 
@@ -27,15 +27,15 @@ namespace NissanManufacturingPlanning.Classes
             this.year = year;
         }
 
-        private string getTypeId() {
+         public string getTypeId() {
             return modelType;
         }
 
-        private int getMotorId() {
+        public int getMotorId() {
             return motorId;
         }
 
-        private int getYear() {
+        public int getYear() {
             return year;
         }
 

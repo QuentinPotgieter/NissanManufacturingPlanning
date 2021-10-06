@@ -23,7 +23,7 @@ namespace NissanManufacturingPlanning
             motor.ShowDialog();
 
             //Weird error
-            new MainForm().SqlInsert("INSERT INTO Motor (Size, Type, Description) VALUES ("+motor.fMotor.getSize().ToString()+",'"+ motor.fMotor.GetType()+"','"+ motor.fMotor.getDescription()+ "')");
+            new MainForm().SqlInsert("INSERT INTO Motor (Size, Type, Description) VALUES ("+motor.fMotor.getSize().ToString()+",'"+ motor.fMotor.motorType+"','"+ motor.fMotor.getDescription()+ "')");
 
             new MainForm().QuerySelectAll("Motor", dgvMotors);
         }
