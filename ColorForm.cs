@@ -23,8 +23,10 @@ namespace NissanManufacturingPlanning
         {
             string name = tbxName.Text;
 
+            //Check duplicate
+
             // Input validation
-            if (name == null)
+            if (name == "")
             {
                 MessageBox.Show("Please enter a name");
                 return;

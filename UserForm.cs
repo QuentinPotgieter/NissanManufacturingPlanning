@@ -32,8 +32,18 @@ namespace NissanManufacturingPlanning
             string role = cbbRole.Text;
 
             //Input Validation
-
-            //class
+            if (sname == "" || fname == "" || pw == "" || role == "")
+            {
+                MessageBox.Show("Please enter a value for each field");
+                return;
+            }
+            if (sname.Length > 50 || fname.Length > 50 || pw.Length > 50 || role.Length > 50)
+            {
+                MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
+                return;
+            }
+            
+            
             fuser = new User(sname,fname,pw,role);
 
             UsersForm.ActiveForm.Show();

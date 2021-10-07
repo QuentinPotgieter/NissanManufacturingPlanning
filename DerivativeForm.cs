@@ -25,25 +25,24 @@ namespace NissanManufacturingPlanning
             string name = tbxName.Text;
             string color = cbbColor.SelectedItem.ToString();
             string motor = cbbMotor.SelectedItem.ToString();
-            int model = Convert.ToInt32(cbbModel.SelectedItem.ToString());
             bool sunroof = cbSunRoof.Checked;
             bool autogearbox = cbAutomatic.Checked;
             bool electricwindows = cbElectricWindows.Checked;
             bool leather = cbLeather.Checked;
 
             // Input validation
-            if (name == null)
+            if (name == "" || color == "" || motor == "" || cbbModel.Text == "")
             {
-                MessageBox.Show("Please enter a name");
+                MessageBox.Show("Please enter a value in each field");
                 return;
             }
-            if (name.Length > 50)
+            if (name.Length > 50 || color.Length > 50 || motor.Length > 50)
             {
                 MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
                 return;
             }
+            int model = Convert.ToInt32(cbbModel.SelectedItem.ToString());
 
-            
             derivative = new Derivative(model, name, color, electricwindows, autogearbox, sunroof, leather);
             derivative.setName(name);
 

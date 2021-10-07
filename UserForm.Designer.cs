@@ -44,7 +44,6 @@ namespace NissanManufacturingPlanning
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.cbbRole);
             this.groupBox1.Controls.Add(this.tbxPw);
@@ -57,16 +56,16 @@ namespace NissanManufacturingPlanning
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(284, 228);
+            this.groupBox1.Size = new System.Drawing.Size(284, 184);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(167, 189);
+            this.button1.Location = new System.Drawing.Point(86, 200);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.Size = new System.Drawing.Size(130, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Create Profile";
             this.button1.UseVisualStyleBackColor = true;
@@ -150,7 +149,8 @@ namespace NissanManufacturingPlanning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(301, 244);
+            this.ClientSize = new System.Drawing.Size(301, 232);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Name = "UserForm";
             this.Text = "UserForm";

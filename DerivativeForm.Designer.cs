@@ -39,11 +39,19 @@ namespace NissanManufacturingPlanning
             this.cbSunRoof = new System.Windows.Forms.CheckBox();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbbModel);
             this.groupBox1.Controls.Add(this.cbbMotor);
             this.groupBox1.Controls.Add(this.cbbColor);
@@ -56,7 +64,7 @@ namespace NissanManufacturingPlanning
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(288, 249);
+            this.groupBox1.Size = new System.Drawing.Size(288, 276);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Derivative";
@@ -64,34 +72,31 @@ namespace NissanManufacturingPlanning
             // cbbModel
             // 
             this.cbbModel.FormattingEnabled = true;
-            this.cbbModel.Location = new System.Drawing.Point(7, 114);
+            this.cbbModel.Location = new System.Drawing.Point(7, 143);
             this.cbbModel.Name = "cbbModel";
             this.cbbModel.Size = new System.Drawing.Size(274, 21);
             this.cbbModel.TabIndex = 11;
-            this.cbbModel.Text = "Model";
             // 
             // cbbMotor
             // 
             this.cbbMotor.FormattingEnabled = true;
-            this.cbbMotor.Location = new System.Drawing.Point(7, 85);
+            this.cbbMotor.Location = new System.Drawing.Point(7, 106);
             this.cbbMotor.Name = "cbbMotor";
             this.cbbMotor.Size = new System.Drawing.Size(274, 21);
             this.cbbMotor.TabIndex = 10;
-            this.cbbMotor.Text = "Motor";
             // 
             // cbbColor
             // 
             this.cbbColor.FormattingEnabled = true;
-            this.cbbColor.Location = new System.Drawing.Point(7, 54);
+            this.cbbColor.Location = new System.Drawing.Point(7, 69);
             this.cbbColor.Name = "cbbColor";
             this.cbbColor.Size = new System.Drawing.Size(274, 21);
             this.cbbColor.TabIndex = 9;
-            this.cbbColor.Text = "Color";
             // 
             // cbLeather
             // 
             this.cbLeather.AutoSize = true;
-            this.cbLeather.Location = new System.Drawing.Point(7, 222);
+            this.cbLeather.Location = new System.Drawing.Point(7, 253);
             this.cbLeather.Margin = new System.Windows.Forms.Padding(2);
             this.cbLeather.Name = "cbLeather";
             this.cbLeather.Size = new System.Drawing.Size(92, 17);
@@ -102,7 +107,7 @@ namespace NissanManufacturingPlanning
             // cbElectricWindows
             // 
             this.cbElectricWindows.AutoSize = true;
-            this.cbElectricWindows.Location = new System.Drawing.Point(7, 193);
+            this.cbElectricWindows.Location = new System.Drawing.Point(7, 224);
             this.cbElectricWindows.Margin = new System.Windows.Forms.Padding(2);
             this.cbElectricWindows.Name = "cbElectricWindows";
             this.cbElectricWindows.Size = new System.Drawing.Size(108, 17);
@@ -113,7 +118,7 @@ namespace NissanManufacturingPlanning
             // cbAutomatic
             // 
             this.cbAutomatic.AutoSize = true;
-            this.cbAutomatic.Location = new System.Drawing.Point(7, 166);
+            this.cbAutomatic.Location = new System.Drawing.Point(7, 197);
             this.cbAutomatic.Margin = new System.Windows.Forms.Padding(2);
             this.cbAutomatic.Name = "cbAutomatic";
             this.cbAutomatic.Size = new System.Drawing.Size(116, 17);
@@ -124,7 +129,7 @@ namespace NissanManufacturingPlanning
             // cbSunRoof
             // 
             this.cbSunRoof.AutoSize = true;
-            this.cbSunRoof.Location = new System.Drawing.Point(7, 138);
+            this.cbSunRoof.Location = new System.Drawing.Point(7, 169);
             this.cbSunRoof.Margin = new System.Windows.Forms.Padding(2);
             this.cbSunRoof.Name = "cbSunRoof";
             this.cbSunRoof.Size = new System.Drawing.Size(71, 17);
@@ -134,16 +139,15 @@ namespace NissanManufacturingPlanning
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(6, 23);
+            this.tbxName.Location = new System.Drawing.Point(7, 29);
             this.tbxName.Margin = new System.Windows.Forms.Padding(2);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(275, 20);
             this.tbxName.TabIndex = 0;
-            this.tbxName.Text = "Name";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(148, 271);
+            this.btnAdd.Location = new System.Drawing.Point(83, 291);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(146, 32);
@@ -152,11 +156,47 @@ namespace NissanManufacturingPlanning
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Name:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Color:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Motor:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Model:";
+            // 
             // DerivativeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 314);
+            this.ClientSize = new System.Drawing.Size(307, 328);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -181,5 +221,9 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.ComboBox cbbMotor;
         private System.Windows.Forms.ComboBox cbbColor;
         private System.Windows.Forms.ComboBox cbbModel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
