@@ -44,7 +44,7 @@ namespace NissanManufacturingPlanning
 
             int length = cbbMotor.Text.IndexOf("-") - 1;
 
-            int model = Convert.ToInt32(cbbModel.Text.Substring(0,length));
+            int model = Convert.ToInt32(cbbMotor.SelectedItem.ToString().Substring(0,length));
 
             derivative = new Derivative(model, name, color, electricwindows, autogearbox, sunroof, leather);
             derivative.setName(name);
