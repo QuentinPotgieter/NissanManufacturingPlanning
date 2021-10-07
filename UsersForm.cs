@@ -40,7 +40,7 @@ namespace NissanManufacturingPlanning
 
             string index = dgvUser.Rows[dgvUser.SelectedCells[0].RowIndex].Cells["UserID"].Value.ToString();
 
-            new MainForm().SqlUpdate("UPDATE [User] SET FirstName = '"+ userform.fuser.getFName() + "', Surname = '" + userform.fuser.getSName() + "', Password = '" + userform.fuser.getPw() + "', Role = '" + userform.fuser.getRole()+" WHERE UserID = "+index);
+            new MainForm().SqlUpdate("UPDATE [User] SET FirstName = '"+ userform.fuser.getFName() + "', Surname = '" + userform.fuser.getSName() + "', Password = '" + userform.fuser.getPw() + "', Role = '" + userform.fuser.getRole()+"' WHERE UserID = "+index);
 
             new MainForm().QuerySelectAll("[User]", dgvUser);
         }
