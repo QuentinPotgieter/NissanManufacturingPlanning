@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NissanManufacturingPlanning.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,11 +22,11 @@ namespace NissanManufacturingPlanning
         {
             PlantForm plant = new PlantForm();
             plant.ShowDialog();
-
-            new MainForm().SqlInsert("INSERT INTO Plant (Name, Country, Address, Rate, Uptime, ShiftDuration) VALUES (" +
-                plant.fPlant.getDescription()+")") ;
-
-            new MainForm().QuerySelectAll("Plant", dgvPlants);
+            if (plant.fPlant != null)
+            {
+                new MainForm().SqlInsert("INSERT INTO Plant (Name, Country, Address, Rate, Uptime, ShiftDuration) VALUES (" + plant.fPlant.getDescription() + ")");
+                new MainForm().QuerySelectAll("Plant", dgvPlants);
+            }
         }
 
         private void Plants_Shown(object sender, EventArgs e)
@@ -39,8 +40,14 @@ namespace NissanManufacturingPlanning
             plant.ShowDialog();
 
             string index = dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["PlantID"].Value.ToString();
-
-            new MainForm().SqlUpdate("UPDATE Plant SET Name = '"+plant.fPlant.getName()+"', Country = '"+plant.fPlant.getCountryId()+"', Address = '"+plant.fPlant.getAddress()+"', Rate = "+plant.fPlant.getRate().ToString()+", Uptime = "+ plant.fPlant.getAvailablity().ToString()+", ShiftDuration = "+plant.fPlant.getShiftDuration().ToString()+" WHERE PlantID = '"+index+"'");
+            try
+            {
+                new MainForm().SqlUpdate("UPDATE Plant SET Name = '" + plant.fPlant.getName() + "', Country = '" + plant.fPlant.getCountryId() + "', Address = '" + plant.fPlant.getAddress() + "', Rate = " + plant.fPlant.getRate().ToString() + ", Uptime = " + plant.fPlant.getAvailablity().ToString() + ", ShiftDuration = " + plant.fPlant.getShiftDuration().ToString() + " WHERE PlantID = '" + index + "'");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No Input", "No database changes made.");
+            }
 
             new MainForm().QuerySelectAll("Plant", dgvPlants);
         }

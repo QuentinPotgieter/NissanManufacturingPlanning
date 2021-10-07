@@ -13,7 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class UserForm : Form
     {
-        public User fuser;
+        public User fuser = null;
         public UserForm()
         {
             InitializeComponent();

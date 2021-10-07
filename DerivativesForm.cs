@@ -22,9 +22,12 @@ namespace NissanManufacturingPlanning
             DerivativeForm derivative = new DerivativeForm();
             derivative.ShowDialog();
 
-            new MainForm().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats) VALUES ("+derivative.derivative.getModelId().ToString()+",'"+ derivative.derivative.getName()+"','"+ derivative.derivative.getColorId()+"',"+ derivative.derivative.isElectricWindows().ToString()+","+ derivative.derivative.isAutomaticGearbox().ToString()+","+derivative.derivative.isSunRoof().ToString() + ","+ derivative.derivative.isLeatherSeats().ToString() + ")");
+            if (derivative.derivative != null)
+            {
+                new MainForm().SqlInsert("INSERT INTO VehicleDerivative (ModelID, Name, Color, ElectricWindows, AutomaticGearbox, SunRoof, LeatherSeats) VALUES (" + derivative.derivative.getModelId().ToString() + ",'" + derivative.derivative.getName() + "','" + derivative.derivative.getColorId() + "'," + derivative.derivative.isElectricWindows().ToString() + "," + derivative.derivative.isAutomaticGearbox().ToString() + "," + derivative.derivative.isSunRoof().ToString() + "," + derivative.derivative.isLeatherSeats().ToString() + ")");
 
-            new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
+                new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
+            }
         }
 
         private void Derivatives_Shown(object sender, EventArgs e)

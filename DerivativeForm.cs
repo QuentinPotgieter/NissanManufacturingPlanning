@@ -14,7 +14,7 @@ namespace NissanManufacturingPlanning
     public partial class DerivativeForm : Form
     {
 
-        public Derivative derivative;
+        public Derivative derivative = null;
         public DerivativeForm()
         {
             InitializeComponent();

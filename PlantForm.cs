@@ -13,7 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class PlantForm : Form
     {
-        public Plant fPlant;
+        public Plant fPlant = null;
         public PlantForm()
         {
             InitializeComponent();

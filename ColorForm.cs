@@ -13,7 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class ColorForm : Form
     {
-        public VehicleColor fcolor;
+        public VehicleColor fcolor = null;
         public ColorForm()
         {
             InitializeComponent();
