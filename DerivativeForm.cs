@@ -42,9 +42,9 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            int length = cbbMotor.Text.IndexOf("-") - 1;
+            int length = cbbModel.Text.IndexOf("-") - 1;
 
-            int model = Convert.ToInt32(cbbMotor.SelectedItem.ToString().Substring(0,length));
+            int model = Convert.ToInt32(cbbModel.SelectedItem.ToString().Substring(0,length));
 
             derivative = new Derivative(model, name, color, electricwindows, autogearbox, sunroof, leather);
             derivative.setName(name);
@@ -68,9 +68,10 @@ namespace NissanManufacturingPlanning
                 cbbMotor.Items.Add(motor[i] + " - "+ motorTwo[i]);
             }
             List<string> model = new MainForm().FillComboBox("SELECT ModelID FROM VehicleModel", cbbModel);
+            List<string> modelTwo = new MainForm().FillComboBox("SELECT ModelName FROM VehicleModel", cbbMotor);
             for (int i = 0; i < model.Count; i++)
             {
-                cbbModel.Items.Add(model[i]);
+                cbbModel.Items.Add(model[i] + " - " + modelTwo[i]);
             }
         }
     }
