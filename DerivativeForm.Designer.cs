@@ -30,6 +30,10 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbbModel = new System.Windows.Forms.ComboBox();
             this.cbbMotor = new System.Windows.Forms.ComboBox();
             this.cbbColor = new System.Windows.Forms.ComboBox();
@@ -39,10 +43,6 @@ namespace NissanManufacturingPlanning
             this.cbSunRoof = new System.Windows.Forms.CheckBox();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,8 +69,45 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Derivative";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Model:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Motor:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Color:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Name:";
+            // 
             // cbbModel
             // 
+            this.cbbModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbModel.FormattingEnabled = true;
             this.cbbModel.Location = new System.Drawing.Point(7, 143);
             this.cbbModel.Name = "cbbModel";
@@ -79,6 +116,7 @@ namespace NissanManufacturingPlanning
             // 
             // cbbMotor
             // 
+            this.cbbMotor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMotor.FormattingEnabled = true;
             this.cbbMotor.Location = new System.Drawing.Point(7, 106);
             this.cbbMotor.Name = "cbbMotor";
@@ -87,6 +125,7 @@ namespace NissanManufacturingPlanning
             // 
             // cbbColor
             // 
+            this.cbbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbColor.FormattingEnabled = true;
             this.cbbColor.Location = new System.Drawing.Point(7, 69);
             this.cbbColor.Name = "cbbColor";
@@ -155,42 +194,6 @@ namespace NissanManufacturingPlanning
             this.btnAdd.Text = "Add/Update";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Color:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Motor:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Model:";
             // 
             // DerivativeForm
             // 

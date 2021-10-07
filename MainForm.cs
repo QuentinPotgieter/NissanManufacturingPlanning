@@ -214,6 +214,8 @@ namespace NissanManufacturingPlanning
         {
             string plan = dgvProductionOutput.Rows[dgvProductionOutput.SelectedCells[0].RowIndex].Cells["PlanID"].Value.ToString();
             string sales = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestID"].Value.ToString();
+            //todo verification of production output !=null
+
             SqlUpdate("UPDATE [SalesRequest] SET PlanID = " + plan + " WHERE SalesRequestID = " + sales);
         }
 
