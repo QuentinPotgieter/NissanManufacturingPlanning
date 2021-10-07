@@ -139,7 +139,8 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\quentinpotgieter\source\repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf;Integrated Security=True");
+
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\test\source\repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
