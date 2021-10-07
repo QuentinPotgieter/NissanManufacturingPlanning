@@ -68,6 +68,7 @@
     <Compile Include="Classes\Plant.cs" />
     <Compile Include="Classes\ProductionProgramme.cs" />
     <Compile Include="Classes\SalesRequest.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\Vehicle.cs" />
     <Compile Include="Classes\VehicleColor.cs" />
     <Compile Include="ColorForm.cs">

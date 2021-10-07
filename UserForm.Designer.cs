@@ -30,15 +30,15 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbbRole = new System.Windows.Forms.ComboBox();
+            this.tbxPw = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbxSurname = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbxSurname = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,8 +46,8 @@ namespace NissanManufacturingPlanning
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.cbbRole);
+            this.groupBox1.Controls.Add(this.tbxPw);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tbxSurname);
             this.groupBox1.Controls.Add(this.label2);
@@ -61,6 +61,73 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(167, 189);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Create Profile";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Role:";
+            // 
+            // cbbRole
+            // 
+            this.cbbRole.FormattingEnabled = true;
+            this.cbbRole.Items.AddRange(new object[] {
+            "Sales",
+            "Planner",
+            "Administrator"});
+            this.cbbRole.Location = new System.Drawing.Point(12, 148);
+            this.cbbRole.Name = "cbbRole";
+            this.cbbRole.Size = new System.Drawing.Size(257, 21);
+            this.cbbRole.TabIndex = 9;
+            this.cbbRole.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // tbxPw
+            // 
+            this.tbxPw.Location = new System.Drawing.Point(12, 111);
+            this.tbxPw.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPw.Name = "tbxPw";
+            this.tbxPw.PasswordChar = '•';
+            this.tbxPw.Size = new System.Drawing.Size(259, 20);
+            this.tbxPw.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Password:";
+            // 
+            // tbxSurname
+            // 
+            this.tbxSurname.Location = new System.Drawing.Point(10, 72);
+            this.tbxSurname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxSurname.Name = "tbxSurname";
+            this.tbxSurname.Size = new System.Drawing.Size(259, 20);
+            this.tbxSurname.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "First Name:";
             // 
             // label1
             // 
@@ -78,72 +145,6 @@ namespace NissanManufacturingPlanning
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(259, 20);
             this.tbxName.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "First Name:";
-            // 
-            // tbxSurname
-            // 
-            this.tbxSurname.Location = new System.Drawing.Point(10, 72);
-            this.tbxSurname.Margin = new System.Windows.Forms.Padding(2);
-            this.tbxSurname.Name = "tbxSurname";
-            this.tbxSurname.Size = new System.Drawing.Size(259, 20);
-            this.tbxSurname.TabIndex = 6;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 111);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '•';
-            this.textBox1.Size = new System.Drawing.Size(259, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Password:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Sales",
-            "Planner",
-            "Administrator"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 148);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(257, 21);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Role:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(167, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Create Profile";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // UserForm
             // 
@@ -165,8 +166,8 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbbRole;
+        private System.Windows.Forms.TextBox tbxPw;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbxSurname;
         private System.Windows.Forms.Label label2;
