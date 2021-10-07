@@ -121,7 +121,7 @@ namespace NissanManufacturingPlanning
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // SalesRequest
+            // SalesRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,7 +130,7 @@ namespace NissanManufacturingPlanning
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "SalesRequest";
+            this.Name = "SalesRequestForm";
             this.Text = "SalesRequest";
             this.Shown += new System.EventHandler(this.SalesRequest_Shown);
             this.groupBox1.ResumeLayout(false);

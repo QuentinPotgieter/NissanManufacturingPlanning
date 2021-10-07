@@ -19,9 +19,13 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DateTime date = dateRequired.Value;
-            decimal quantity = numQuantity.Value;
-            string derivative = cbbDerivative.SelectedIndex.ToString();
+            
+            DateTime date       = dateRequired.Value;
+            int      quantity   = Convert.ToInt32(numQuantity.Value);
+            string   derivative = cbbDerivative.SelectedIndex.ToString();
+
+            new MainForm().SqlInsert("INSERT INTO SalesRequest (DateRequired, DerivativeID, Quantity) VALUES (" + date.ToString("MM/dd/yyyy") + ",1,2)");
+
 
             MainForm.ActiveForm.Show();
             this.Close();

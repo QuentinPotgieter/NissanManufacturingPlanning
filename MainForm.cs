@@ -28,7 +28,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
                 adap = new SqlDataAdapter();
                 ds = new DataSet();
@@ -56,7 +56,7 @@ namespace NissanManufacturingPlanning
             {
                 try
                 {
-                    conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                    conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                     conn.Open();
 
                     comm = new SqlCommand(query, conn);
@@ -78,7 +78,7 @@ namespace NissanManufacturingPlanning
             
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 comm = new SqlCommand(query, conn);
@@ -102,7 +102,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
@@ -132,7 +132,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
@@ -152,7 +152,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
@@ -217,7 +217,7 @@ namespace NissanManufacturingPlanning
 
         private void Main_Shown(object sender, EventArgs e)
         {
-            QuerySelectAll("SalesRequest", dgvSalesRequests);
+            QuerySelectAll("SalesRequest",   dgvSalesRequests);
             QuerySelectAll("ProductionPlan", dgvProductionOutput);
         }
 
