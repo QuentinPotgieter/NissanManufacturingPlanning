@@ -223,7 +223,9 @@ namespace NissanManufacturingPlanning
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string plan = dgvProductionOutput.Rows[dgvProductionOutput.SelectedCells[0].RowIndex].Cells["PlanID"].Value.ToString();
+            string sales = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestID"].Value.ToString();
+            SqlUpdate("UPDATE [SalesRequest] SET PlanID = " + plan + " WHERE SalesRequestID = " + sales);
         }
 
         private void button4_Click(object sender, EventArgs e)
