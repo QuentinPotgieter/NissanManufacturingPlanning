@@ -29,7 +29,7 @@ namespace NissanManufacturingPlanning
             int duration = Convert.ToInt32(numDuration.Value);
 
             // Input validation
-            if (name == "" || country == "" || address == "" || rate != 0 || uptime != 0 || duration != 0)
+            if (name == "" || country == "" || address == "" || rate == 0 || uptime == 0 || duration == 0)
             {
                 MessageBox.Show("Please enter a name");
                 return;
