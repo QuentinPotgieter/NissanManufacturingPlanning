@@ -22,9 +22,10 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int length = cbbMotor.Text.IndexOf("-") - 1;
             string name = tbxName.Text;
             string color = cbbColor.SelectedItem.ToString();
-            string motor = cbbMotor.SelectedItem.ToString();
+            string motor = cbbMotor.SelectedItem.ToString().Substring(0,length);
             bool sunroof = cbSunRoof.Checked;
             bool autogearbox = cbAutomatic.Checked;
             bool electricwindows = cbElectricWindows.Checked;
@@ -42,7 +43,7 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            int length = cbbModel.Text.IndexOf("-") - 1;
+            length = cbbModel.Text.IndexOf("-") - 1;
 
             int model = Convert.ToInt32(cbbModel.SelectedItem.ToString().Substring(0,length));
 

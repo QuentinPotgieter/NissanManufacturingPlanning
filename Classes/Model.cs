@@ -27,9 +27,6 @@ namespace NissanManufacturingPlanning.Classes
             this.year = year;
         }
 
-         public string getName() {
-            return name;
-        }
 
         public int getMotorId() {
             return motorId;
