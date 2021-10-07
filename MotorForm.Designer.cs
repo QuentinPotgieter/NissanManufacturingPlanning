@@ -36,12 +36,14 @@ namespace NissanManufacturingPlanning
             this.numSize = new System.Windows.Forms.NumericUpDown();
             this.cbbType = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSize)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tbxDesc);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblSize);
@@ -101,15 +103,14 @@ namespace NissanManufacturingPlanning
             "CXCVT",
             "CVT",
             "XR"});
-            this.cbbType.Location = new System.Drawing.Point(8, 60);
+            this.cbbType.Location = new System.Drawing.Point(8, 66);
             this.cbbType.Name = "cbbType";
             this.cbbType.Size = new System.Drawing.Size(235, 21);
             this.cbbType.TabIndex = 2;
-            this.cbbType.Text = "Motor Type";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(128, 144);
+            this.btnAdd.Location = new System.Drawing.Point(68, 144);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(126, 37);
@@ -117,6 +118,15 @@ namespace NissanManufacturingPlanning
             this.btnAdd.Text = "Add/Update";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Type of Motor";
             // 
             // MotorForm
             // 
@@ -144,5 +154,6 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.ComboBox cbbType;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxDesc;
+        private System.Windows.Forms.Label label2;
     }
 }

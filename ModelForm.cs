@@ -21,24 +21,23 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string name = tbxName.Text;
-            int year = Convert.ToInt32(numYear.Value);
-            int motor = Convert.ToInt32(cbbMotor.Text);
-
             // Input validation
-            if (name == null)
+            if (tbxName.Text == "" || cbbMotor.Text == "")
             {
-                MessageBox.Show("Please enter a name");
+                MessageBox.Show("Please enter a value for each field");
                 return;
             }
-            if (name.Length > 50)
+            if (tbxName.Text.Length > 50)
             {
                 MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
                 return;
             }
 
-            fmodel = new Model(name,motor,year);
+            string name = tbxName.Text;
+            int year = Convert.ToInt32(numYear.Value);
+            int motor = Convert.ToInt32(cbbMotor.Text);            
 
+            fmodel = new Model(name,motor,year);
             
             ModelsForm.ActiveForm.Show();
             this.Close();
