@@ -32,10 +32,11 @@ namespace NissanManufacturingPlanning
                 MessageBox.Show("The name you have entered is too long (Max 50 Characters)");
                 return;
             }
-
+            
+            int length = cbbMotor.Text.IndexOf("-") - 1;
             string name = tbxName.Text;
             int year = Convert.ToInt32(numYear.Value);
-            int motor = Convert.ToInt32(cbbMotor.Text);            
+            int motor = Convert.ToInt32(cbbMotor.Text.Substring(0,length));
 
             fmodel = new Model(name,motor,year);
             
@@ -45,10 +46,11 @@ namespace NissanManufacturingPlanning
 
         private void ModelForm_Shown(object sender, EventArgs e)
         {
-            List<string> motor = new MainForm().FillComboBox("SELECT * FROM Motor", cbbMotor);
+            List<string> motor = new MainForm().FillComboBox("SELECT MotorID FROM Motor", cbbMotor);
+            List<string> motorTwo = new MainForm().FillComboBox("SELECT Description FROM Motor", cbbMotor);
             for (int i = 0; i < motor.Count; i++)
             {
-                cbbMotor.Items.Add(motor[i]);
+                cbbMotor.Items.Add(motor[i] + " - " + motorTwo[i]);
             }
         }
     }

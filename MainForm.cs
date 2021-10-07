@@ -28,7 +28,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
                 adap = new SqlDataAdapter();
                 ds = new DataSet();
@@ -51,42 +51,29 @@ namespace NissanManufacturingPlanning
         public List<string> FillComboBox(string query, ComboBox cbb) //Method is to return array used to fill combo box
         {
             List<string> list = new List<string>();
-
-            if (cbb.Name == "cbbColor")
-            {
-                try
-                {
-                    conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
-                    conn.Open();
-
-                    comm = new SqlCommand(query, conn);
-                    read = comm.ExecuteReader();
-
-                    while (read.Read())
-                    {
-                        cbb.Items.Add(read.GetString(0));
-                    }
-                    conn.Close();
-                }
-                catch (SqlException error)
-                {
-                    MessageBox.Show(error.Message);
-                }
-
-                return list;
-            }
             
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 comm = new SqlCommand(query, conn);
                 read = comm.ExecuteReader();
-
-                while (read.Read())
+                
+                if (read.GetDataTypeName(0) == "int")
                 {
-                    cbb.Items.Add(read.GetInt32(0).ToString());
+                    while (read.Read())
+                    {
+                        list.Add(read.GetInt32(0).ToString());
+                    }
+                }
+
+                if (read.GetDataTypeName(0) == "varchar")
+                {
+                    while (read.Read())
+                    {
+                        list.Add(read.GetString(0));
+                    }
                 }
                 conn.Close();
             }
@@ -102,7 +89,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
@@ -132,7 +119,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
@@ -152,7 +139,7 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\phill\source\repos\NissanManufacturingPlanning\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\DEHAN-PC\source\repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf;Integrated Security=True");
                 conn.Open();
 
                 adap = new SqlDataAdapter();
@@ -207,12 +194,14 @@ namespace NissanManufacturingPlanning
         {
             SalesRequestForm salesRequest = new SalesRequestForm();
             salesRequest.ShowDialog();
+            QuerySelectAll("SalesRequest", dgvSalesRequests);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             ProductionPlan productionPlan = new ProductionPlan();
             productionPlan.ShowDialog();
+            QuerySelectAll("ProductionPlan", dgvProductionOutput);
         }
 
         private void Main_Shown(object sender, EventArgs e)
@@ -230,7 +219,7 @@ namespace NissanManufacturingPlanning
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string name = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestsID"].Value.ToString();
+            string name = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestID"].Value.ToString();
             if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
                 new MainForm().SqlDelete("DELETE FROM SalesRequest WHERE SalesRequestID = " + name);
