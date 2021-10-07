@@ -245,5 +245,11 @@ namespace NissanManufacturingPlanning
             }
             new MainForm().QuerySelectAll("ProductionPlan", dgvProductionOutput);
         }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsersForm usersForm = new UsersForm();
+            usersForm.ShowDialog();
+        }
     }
 }

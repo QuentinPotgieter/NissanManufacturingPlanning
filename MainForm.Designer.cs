@@ -49,6 +49,7 @@ namespace NissanManufacturingPlanning
             this.colorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.motorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesRequests)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -192,7 +193,7 @@ namespace NissanManufacturingPlanning
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Logout";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -202,7 +203,8 @@ namespace NissanManufacturingPlanning
             this.managePlantsToolStripMenuItem,
             this.manageDerivativesToolStripMenuItem,
             this.colorsToolStripMenuItem,
-            this.motorsToolStripMenuItem});
+            this.motorsToolStripMenuItem,
+            this.usersToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 22);
             this.editToolStripMenuItem.Text = "Edit";
@@ -210,7 +212,7 @@ namespace NissanManufacturingPlanning
             // managePlantsToolStripMenuItem
             // 
             this.managePlantsToolStripMenuItem.Name = "managePlantsToolStripMenuItem";
-            this.managePlantsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.managePlantsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.managePlantsToolStripMenuItem.Text = "Plants";
             this.managePlantsToolStripMenuItem.Click += new System.EventHandler(this.managePlantsToolStripMenuItem_Click);
             // 
@@ -220,7 +222,7 @@ namespace NissanManufacturingPlanning
             this.derivativesToolStripMenuItem,
             this.modelsToolStripMenuItem});
             this.manageDerivativesToolStripMenuItem.Name = "manageDerivativesToolStripMenuItem";
-            this.manageDerivativesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.manageDerivativesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.manageDerivativesToolStripMenuItem.Text = "Vehicles";
             // 
             // derivativesToolStripMenuItem
@@ -240,14 +242,14 @@ namespace NissanManufacturingPlanning
             // colorsToolStripMenuItem
             // 
             this.colorsToolStripMenuItem.Name = "colorsToolStripMenuItem";
-            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colorsToolStripMenuItem.Text = "Colors";
             this.colorsToolStripMenuItem.Click += new System.EventHandler(this.colorsToolStripMenuItem_Click);
             // 
             // motorsToolStripMenuItem
             // 
             this.motorsToolStripMenuItem.Name = "motorsToolStripMenuItem";
-            this.motorsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.motorsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.motorsToolStripMenuItem.Text = "Motors";
             this.motorsToolStripMenuItem.Click += new System.EventHandler(this.motorsToolStripMenuItem_Click);
             // 
@@ -256,6 +258,13 @@ namespace NissanManufacturingPlanning
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 22);
             this.reportsToolStripMenuItem.Text = "Reports";
+            // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -304,6 +313,7 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dgvProductionOutput;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
     }
 }
 
