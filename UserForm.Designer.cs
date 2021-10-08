@@ -165,13 +165,13 @@ namespace NissanManufacturingPlanning
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbRole;
-        private System.Windows.Forms.TextBox tbxPw;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbxSurname;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox tbxName;
+        public System.Windows.Forms.TextBox tbxPw;
+        public System.Windows.Forms.TextBox tbxSurname;
     }
 }

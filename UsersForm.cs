@@ -37,10 +37,12 @@ namespace NissanManufacturingPlanning
         {
             UserForm userform = new UserForm();
             userform.button1.Text = "Update Profile";
+            userform.tbxName.Text = dgvUser.Rows[dgvUser.SelectedCells[0].RowIndex].Cells["FirstName"].Value.ToString(); 
+            userform.tbxPw.Text = dgvUser.Rows[dgvUser.SelectedCells[0].RowIndex].Cells["Password"].Value.ToString(); 
+            userform.tbxSurname.Text = dgvUser.Rows[dgvUser.SelectedCells[0].RowIndex].Cells["Surname"].Value.ToString(); 
             userform.ShowDialog();
 
             string index = dgvUser.Rows[dgvUser.SelectedCells[0].RowIndex].Cells["UserID"].Value.ToString();
-
 
             if (userform.fuser != null)
             {

@@ -37,19 +37,22 @@ namespace NissanManufacturingPlanning
         private void button2_Click(object sender, EventArgs e)
         {
             PlantForm plant = new PlantForm();
+            plant.btnAdd.Text = "Update Plant";
+            plant.tbxName.Text = dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["Name"].Value.ToString(); 
+            plant.tbxCountry.Text = dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["Country"].Value.ToString(); 
+            plant.tbxAddress.Text = dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["Address"].Value.ToString(); 
+            plant.numDuration.Value = Convert.ToInt32(dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["ShiftDuration"].Value.ToString()) / 60; 
+            plant.numRate.Value = Convert.ToInt32(dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["Rate"].Value.ToString()); 
+            plant.numUptime.Value = Convert.ToInt32(dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["Uptime"].Value.ToString());
             plant.ShowDialog();
 
             string index = dgvPlants.Rows[dgvPlants.SelectedCells[0].RowIndex].Cells["PlantID"].Value.ToString();
-            try
-            {
+            
+            if (plant.fPlant != null)
+            { 
                 new MainForm().SqlUpdate("UPDATE Plant SET Name = '" + plant.fPlant.getName() + "', Country = '" + plant.fPlant.getCountryId() + "', Address = '" + plant.fPlant.getAddress() + "', Rate = " + plant.fPlant.getRate().ToString() + ", Uptime = " + plant.fPlant.getAvailablity().ToString() + ", ShiftDuration = " + plant.fPlant.getShiftDuration().ToString() + " WHERE PlantID = '" + index + "'");
+                new MainForm().QuerySelectAll("Plant", dgvPlants);
             }
-            catch (Exception)
-            {
-                MessageBox.Show("No Input", "No database changes made.");
-            }
-
-            new MainForm().QuerySelectAll("Plant", dgvPlants);
         }
 
         private void button3_Click(object sender, EventArgs e)

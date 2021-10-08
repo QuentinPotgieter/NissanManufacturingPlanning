@@ -33,6 +33,9 @@ namespace NissanManufacturingPlanning
             this.tbxCountry = new System.Windows.Forms.TextBox();
             this.tbxAddress = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblDuration = new System.Windows.Forms.Label();
@@ -41,9 +44,6 @@ namespace NissanManufacturingPlanning
             this.numUptime = new System.Windows.Forms.NumericUpDown();
             this.lblRate = new System.Windows.Forms.Label();
             this.numRate = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDuration)).BeginInit();
@@ -92,6 +92,34 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Address:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Country:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(5, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Name:";
             // 
             // btnAdd
             // 
@@ -171,41 +199,13 @@ namespace NissanManufacturingPlanning
             // 
             this.numRate.Location = new System.Drawing.Point(6, 34);
             this.numRate.Maximum = new decimal(new int[] {
-            300,
+            999999,
             0,
             0,
             0});
             this.numRate.Name = "numRate";
             this.numRate.Size = new System.Drawing.Size(273, 20);
             this.numRate.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Country:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Address:";
             // 
             // PlantForm
             // 
@@ -230,21 +230,20 @@ namespace NissanManufacturingPlanning
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbxName;
-        private System.Windows.Forms.TextBox tbxCountry;
-        private System.Windows.Forms.TextBox tbxAddress;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lblDuration;
-        private System.Windows.Forms.NumericUpDown numDuration;
         private System.Windows.Forms.Label lblUptime;
-        private System.Windows.Forms.NumericUpDown numUptime;
         private System.Windows.Forms.Label lblRate;
-        private System.Windows.Forms.NumericUpDown numRate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox tbxName;
+        public System.Windows.Forms.TextBox tbxCountry;
+        public System.Windows.Forms.TextBox tbxAddress;
+        public System.Windows.Forms.Button btnAdd;
+        public System.Windows.Forms.NumericUpDown numDuration;
+        public System.Windows.Forms.NumericUpDown numUptime;
+        public System.Windows.Forms.NumericUpDown numRate;
     }
 }
