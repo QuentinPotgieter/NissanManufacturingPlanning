@@ -17,6 +17,10 @@ namespace NissanManufacturingPlanning
         {
             InitializeComponent();
         }
+        //Role of logged in user
+        public string UserRole;
+
+
         //SQL Connection
         SqlConnection conn;
         SqlCommand comm;
@@ -217,6 +221,20 @@ namespace NissanManufacturingPlanning
             QuerySelectAll("ProductionPlan", dgvProductionOutput);
             this.Height = 699;
             this.Width = 1281;
+
+            //Do visibility for role
+            /*if (UserRole == "Administrator")
+            {
+                menuStrip1
+            }
+            if (UserRole == "Planner")
+            {
+                menuStrip1
+            }
+            if (UserRole == "Sales")
+            {
+                menuStrip1
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
