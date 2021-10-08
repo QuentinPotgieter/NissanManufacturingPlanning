@@ -38,12 +38,20 @@ namespace NissanManufacturingPlanning
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string name = dgvColors.Rows[dgvColors.SelectedCells[0].RowIndex].Cells["Color"].Value.ToString();
-            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            if (dgvColors.Rows.Count == 0)
             {
-                new MainForm().SqlDelete("DELETE FROM Colors WHERE Color = '" + name+"'");
+                MessageBox.Show("No Colors to Remove");
             }
-            new MainForm().QuerySelectAll("Colors", dgvColors);
+            else
+            {
+                string name = dgvColors.Rows[dgvColors.SelectedCells[0].RowIndex].Cells["Color"].Value.ToString();
+                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    new MainForm().SqlDelete("DELETE FROM Colors WHERE Color = '" + name + "'");
+                }
+                new MainForm().QuerySelectAll("Colors", dgvColors);
+            }
+            
         }
     }
 }

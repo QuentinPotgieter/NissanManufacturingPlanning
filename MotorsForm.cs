@@ -41,13 +41,20 @@ namespace NissanManufacturingPlanning
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string name = dgvMotors.Rows[dgvMotors.SelectedCells[0].RowIndex].Cells["MotorID"].Value.ToString();
-            string index = dgvMotors.Rows[dgvMotors.SelectedCells[0].RowIndex].Cells["MotorID"].Value.ToString();
-            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            if (dgvMotors.Rows.Count == 0)
             {
-                new MainForm().SqlDelete("DELETE FROM Motor WHERE MotorID = " + index);
+                MessageBox.Show("No Motors to Remove");
             }
-            new MainForm().QuerySelectAll("Motor", dgvMotors);
+            else
+            {
+                string name = dgvMotors.Rows[dgvMotors.SelectedCells[0].RowIndex].Cells["MotorID"].Value.ToString();
+                string index = dgvMotors.Rows[dgvMotors.SelectedCells[0].RowIndex].Cells["MotorID"].Value.ToString();
+                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    new MainForm().SqlDelete("DELETE FROM Motor WHERE MotorID = " + index);
+                }
+                new MainForm().QuerySelectAll("Motor", dgvMotors);
+            }  
         }
     }
 };

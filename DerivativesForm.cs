@@ -37,13 +37,21 @@ namespace NissanManufacturingPlanning
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string name = dgvVehicleDerivative.Rows[dgvVehicleDerivative.SelectedCells[0].RowIndex].Cells["Name"].Value.ToString();
-            string index = dgvVehicleDerivative.Rows[dgvVehicleDerivative.SelectedCells[0].RowIndex].Cells["DerivativeID"].Value.ToString();
-            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            if (dgvVehicleDerivative.Rows.Count == 0)//null checking for remove
             {
-                new MainForm().SqlDelete("DELETE FROM VehicleDerivative WHERE DerivativeID = " + index);
+                MessageBox.Show("No Derivatives to remove");
             }
-            new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
+            else
+            {
+                string name = dgvVehicleDerivative.Rows[dgvVehicleDerivative.SelectedCells[0].RowIndex].Cells["Name"].Value.ToString();
+                string index = dgvVehicleDerivative.Rows[dgvVehicleDerivative.SelectedCells[0].RowIndex].Cells["DerivativeID"].Value.ToString();
+                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    new MainForm().SqlDelete("DELETE FROM VehicleDerivative WHERE DerivativeID = " + index);
+                }
+                new MainForm().QuerySelectAll("VehicleDerivative", dgvVehicleDerivative);
+            }
+            
         }
     }
 }
