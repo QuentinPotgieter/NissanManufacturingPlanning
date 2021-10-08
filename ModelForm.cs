@@ -46,8 +46,8 @@ namespace NissanManufacturingPlanning
 
         private void ModelForm_Shown(object sender, EventArgs e)
         {
-            List<string> motor = new MainForm().FillComboBox("SELECT MotorID FROM Motor", cbbMotor);
-            List<string> motorTwo = new MainForm().FillComboBox("SELECT Description FROM Motor", cbbMotor);
+            List<string> motor = new MainForm().FillComboBox("SELECT MotorID FROM Motor");
+            List<string> motorTwo = new MainForm().FillComboBox("SELECT Description FROM Motor");
             for (int i = 0; i < motor.Count; i++)
             {
                 cbbMotor.Items.Add(motor[i] + " - " + motorTwo[i]);

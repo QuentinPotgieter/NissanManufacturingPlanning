@@ -57,19 +57,19 @@ namespace NissanManufacturingPlanning
         private void DerivativeForm_Shown(object sender, EventArgs e)
         {
             //Load comboboxes
-            List<string> color = new MainForm().FillComboBox("SELECT Color FROM Colors", cbbColor);
+            List<string> color = new MainForm().FillComboBox("SELECT Color FROM Colors");
             for (int i = 0; i < color.Count; i++)
             {
                 cbbColor.Items.Add(color[i]);
             }
-            List<string> motor = new MainForm().FillComboBox("SELECT MotorID FROM Motor", cbbMotor);
-            List<string> motorTwo = new MainForm().FillComboBox("SELECT Description FROM Motor", cbbMotor);
+            List<string> motor = new MainForm().FillComboBox("SELECT MotorID FROM Motor");
+            List<string> motorTwo = new MainForm().FillComboBox("SELECT Description FROM Motor");
             for (int i = 0; i<motor.Count; i++)
             {
                 cbbMotor.Items.Add(motor[i] + " - "+ motorTwo[i]);
             }
-            List<string> model = new MainForm().FillComboBox("SELECT ModelID FROM VehicleModel", cbbModel);
-            List<string> modelTwo = new MainForm().FillComboBox("SELECT ModelName FROM VehicleModel", cbbMotor);
+            List<string> model = new MainForm().FillComboBox("SELECT ModelID FROM VehicleModel");
+            List<string> modelTwo = new MainForm().FillComboBox("SELECT ModelName FROM VehicleModel");
             for (int i = 0; i < model.Count; i++)
             {
                 cbbModel.Items.Add(model[i] + " - " + modelTwo[i]);

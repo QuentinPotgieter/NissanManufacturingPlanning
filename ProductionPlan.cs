@@ -44,7 +44,7 @@ namespace NissanManufacturingPlanning
         private void ProductionPlan_Shown(object sender, EventArgs e)
         {
             //Load into combobox
-            List<string> plant = new MainForm().FillComboBox("SELECT * FROM Plant", cbbPlant);
+            List<string> plant = new MainForm().FillComboBox("SELECT * FROM Plant");
             for (int i = 0; i < plant.Count; i++)
             {
                 cbbPlant.Items.Add(plant[i]);

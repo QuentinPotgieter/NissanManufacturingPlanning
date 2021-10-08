@@ -52,7 +52,7 @@ namespace NissanManufacturingPlanning
             }
         }
 
-        public List<string> FillComboBox(string query, ComboBox cbb) //Method is to return array used to fill combo box
+        public List<string> FillComboBox(string query) //Method is to return array used to fill combo box
         {
             List<string> list = new List<string>();
             
@@ -212,6 +212,8 @@ namespace NissanManufacturingPlanning
         {
             QuerySelectAll("SalesRequest",   dgvSalesRequests);
             QuerySelectAll("ProductionPlan", dgvProductionOutput);
+            this.Height = 699;
+            this.Width = 1281;
         }
 
         private void button1_Click(object sender, EventArgs e)

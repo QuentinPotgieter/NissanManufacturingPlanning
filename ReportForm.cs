@@ -27,14 +27,14 @@ namespace NissanManufacturingPlanning
         {
             try
             {
-                conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\quentinpotgieter\source\repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf;Integrated Security=True");
+                conn = new SqlConnection(MainForm.connStr);
                 conn.Open();
                 x1.Text = new SqlCommand("SELECT COUNT(ModelID) FROM VehicleModel", conn).ExecuteScalar().ToString();
                 x2.Text = new SqlCommand("SELECT COUNT(DerivativeID) FROM VehicleDerivative", conn).ExecuteScalar().ToString();
                 x7.Text = new SqlCommand("SELECT COUNT(PlantID) FROM Plant", conn).ExecuteScalar().ToString();
                 x11.Text = new SqlCommand("SELECT COUNT(SalesRequestID) FROM SalesRequest", conn).ExecuteScalar().ToString();
                 x12.Text = new SqlCommand("SELECT COUNT(SalesRequestID) FROM SalesRequest WHERE PlanID IS NOT NULL", conn).ExecuteScalar().ToString();
-                x13.Text = new SqlCommand("SELECT COUNT(SalesRequestID) FROM SalesRequest WHERE PlanID ISs NULL", conn).ExecuteScalar().ToString();
+                x13.Text = new SqlCommand("SELECT COUNT(SalesRequestID) FROM SalesRequest WHERE PlanID IS NULL", conn).ExecuteScalar().ToString();
                 conn.Close();
             }
             catch (SqlException error)
