@@ -63,6 +63,16 @@ namespace NissanManufacturingPlanning.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Backround {
+            get {
+                object obj = ResourceManager.GetObject("Backround", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NissanLogo {
             get {
                 object obj = ResourceManager.GetObject("NissanLogo", resourceCulture);

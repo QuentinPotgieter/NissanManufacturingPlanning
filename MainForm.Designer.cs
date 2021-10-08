@@ -50,11 +50,13 @@ namespace NissanManufacturingPlanning
             this.motorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesRequests)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductionOutput)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,9 +65,9 @@ namespace NissanManufacturingPlanning
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.dgvSalesRequests);
             this.groupBox1.Location = new System.Drawing.Point(12, 33);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(555, 622);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -74,7 +76,7 @@ namespace NissanManufacturingPlanning
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(392, 585);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 24);
             this.button4.TabIndex = 6;
@@ -85,7 +87,7 @@ namespace NissanManufacturingPlanning
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(392, 547);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 24);
             this.button2.TabIndex = 4;
@@ -99,7 +101,7 @@ namespace NissanManufacturingPlanning
             this.dgvSalesRequests.AllowUserToDeleteRows = false;
             this.dgvSalesRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSalesRequests.Location = new System.Drawing.Point(8, 28);
-            this.dgvSalesRequests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSalesRequests.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSalesRequests.Name = "dgvSalesRequests";
             this.dgvSalesRequests.ReadOnly = true;
             this.dgvSalesRequests.RowHeadersWidth = 82;
@@ -113,9 +115,9 @@ namespace NissanManufacturingPlanning
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.dgvProductionOutput);
             this.groupBox2.Location = new System.Drawing.Point(716, 33);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(543, 622);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -124,7 +126,7 @@ namespace NissanManufacturingPlanning
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(386, 585);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 24);
             this.button3.TabIndex = 8;
@@ -135,7 +137,7 @@ namespace NissanManufacturingPlanning
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(386, 547);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(146, 24);
             this.button5.TabIndex = 7;
@@ -149,7 +151,7 @@ namespace NissanManufacturingPlanning
             this.dgvProductionOutput.AllowUserToDeleteRows = false;
             this.dgvProductionOutput.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductionOutput.Location = new System.Drawing.Point(8, 28);
-            this.dgvProductionOutput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductionOutput.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductionOutput.Name = "dgvProductionOutput";
             this.dgvProductionOutput.ReadOnly = true;
             this.dgvProductionOutput.RowHeadersWidth = 82;
@@ -160,7 +162,7 @@ namespace NissanManufacturingPlanning
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(586, 295);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 24);
             this.button1.TabIndex = 2;
@@ -267,6 +269,17 @@ namespace NissanManufacturingPlanning
             this.reportsToolStripMenuItem.Text = "Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::NissanManufacturingPlanning.Properties.Resources.Backround;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1265, 562);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -276,8 +289,9 @@ namespace NissanManufacturingPlanning
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "Nissan Production Planning";
             this.Shown += new System.EventHandler(this.Main_Shown);
@@ -287,6 +301,7 @@ namespace NissanManufacturingPlanning
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductionOutput)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,6 +330,7 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.DataGridView dgvProductionOutput;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

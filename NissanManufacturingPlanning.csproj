@@ -256,6 +256,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>NissanManufacturingDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Backround.png" />
     <None Include="Resources\NissanLogo.png" />
   </ItemGroup>
   <ItemGroup>
