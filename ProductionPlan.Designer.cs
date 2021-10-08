@@ -40,6 +40,8 @@ namespace NissanManufacturingPlanning
             this.numUptime = new System.Windows.Forms.NumericUpDown();
             this.lblRate = new System.Windows.Forms.Label();
             this.numRate = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDuration)).BeginInit();
@@ -49,29 +51,31 @@ namespace NissanManufacturingPlanning
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbbPlant);
             this.groupBox1.Controls.Add(this.tbxName);
             this.groupBox1.Location = new System.Drawing.Point(6, 19);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(284, 86);
+            this.groupBox1.Size = new System.Drawing.Size(284, 96);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
             // cbbPlant
             // 
+            this.cbbPlant.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbPlant.FormattingEnabled = true;
-            this.cbbPlant.Location = new System.Drawing.Point(8, 53);
+            this.cbbPlant.Location = new System.Drawing.Point(8, 64);
             this.cbbPlant.Name = "cbbPlant";
             this.cbbPlant.Size = new System.Drawing.Size(267, 21);
             this.cbbPlant.TabIndex = 3;
-            this.cbbPlant.Text = "Plant";
             // 
             // tbxName
             // 
-            this.tbxName.Location = new System.Drawing.Point(8, 23);
+            this.tbxName.Location = new System.Drawing.Point(8, 30);
             this.tbxName.Margin = new System.Windows.Forms.Padding(2);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(267, 20);
@@ -80,7 +84,7 @@ namespace NissanManufacturingPlanning
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(164, 275);
+            this.btnAdd.Location = new System.Drawing.Point(87, 261);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(126, 31);
@@ -164,11 +168,29 @@ namespace NissanManufacturingPlanning
             this.numRate.Size = new System.Drawing.Size(273, 20);
             this.numRate.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Name:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Plant";
+            // 
             // ProductionPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(303, 319);
+            this.ClientSize = new System.Drawing.Size(303, 300);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
@@ -199,5 +221,7 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.Label lblRate;
         private System.Windows.Forms.NumericUpDown numRate;
         private System.Windows.Forms.ComboBox cbbPlant;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -19,12 +19,14 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            int length = cbbDerivative.SelectedItem.ToString().IndexOf("-")-1;
             DateTime date       = dateRequired.Value;
             int      quantity   = Convert.ToInt32(numQuantity.Value);
-            string   derivative = cbbDerivative.SelectedIndex.ToString();
+            string   derivative = cbbDerivative.SelectedItem.ToString().Substring(0,length);
 
-            new MainForm().SqlInsert("INSERT INTO SalesRequest (DateRequired, DerivativeID, Quantity, PlanID) VALUES ('" + date.ToString("yyyy-MM-dd") + "',"+quantity+","+derivative+",0)");
+            MessageBox.Show(quantity.ToString());
+
+            new MainForm().SqlInsert("INSERT INTO SalesRequest (DateRequired, DerivativeID, Quantity, PlanID) VALUES ('" + date.ToString("yyyy-MM-dd") + "',"+ derivative.ToString() + ","+ quantity.ToString() + ",0)");
 
             MainForm.ActiveForm.Show();
             this.Close();
@@ -33,10 +35,11 @@ namespace NissanManufacturingPlanning
         private void SalesRequest_Shown(object sender, EventArgs e)
         {
             //load derivatives into combobox
-            List<string> deriv = new MainForm().FillComboBox("SELECT * FROM VehicleDerivative");
+            List<string> deriv = new MainForm().FillComboBox("SELECT DerivativeID FROM VehicleDerivative");
+            List<string> derivTwo = new MainForm().FillComboBox("SELECT Name FROM VehicleDerivative");
             for (int i = 0; i < deriv.Count; i++)
             {
-                cbbDerivative.Items.Add(deriv[i]);
+                cbbDerivative.Items.Add(deriv[i]+" - "+derivTwo[i]);
             }
         }
     }

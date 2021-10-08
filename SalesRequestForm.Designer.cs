@@ -103,12 +103,12 @@ namespace NissanManufacturingPlanning
             // 
             // cbbDerivative
             // 
+            this.cbbDerivative.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDerivative.FormattingEnabled = true;
             this.cbbDerivative.Location = new System.Drawing.Point(12, 27);
             this.cbbDerivative.Name = "cbbDerivative";
             this.cbbDerivative.Size = new System.Drawing.Size(301, 21);
             this.cbbDerivative.TabIndex = 1;
-            this.cbbDerivative.Text = "Derivative";
             // 
             // btnAdd
             // 

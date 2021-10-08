@@ -19,11 +19,12 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int length = cbbPlant.SelectedItem.ToString().IndexOf("-")-1;
             string name = tbxName.Text;
-            string plant = cbbPlant.SelectedIndex.ToString();
-            decimal rate = numRate.Value;
-            decimal uptime = numUptime.Value;
-            decimal duration = numDuration.Value;
+            string plant = cbbPlant.SelectedItem.ToString().Substring(0,length);
+            int rate = Convert.ToInt32(numRate.Value);
+            int uptime = Convert.ToInt32(numUptime.Value);
+            int duration = Convert.ToInt32(numDuration.Value)*60;
 
             //input validation
             if (name == null)
@@ -37,6 +38,8 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
+            new MainForm().SqlInsert("INSERT INTO [ProductionPlan] (PlantID, Name, Rate, Uptime, ShiftDuration) VALUES ('"+plant+"','"+name+"',"+rate.ToString()+","+uptime.ToString()+","+duration.ToString()+")");
+
             MainForm.ActiveForm.Show();
             this.Close();
         }
@@ -44,10 +47,11 @@ namespace NissanManufacturingPlanning
         private void ProductionPlan_Shown(object sender, EventArgs e)
         {
             //Load into combobox
-            List<string> plant = new MainForm().FillComboBox("SELECT * FROM Plant");
+            List<string> plant = new MainForm().FillComboBox("SELECT PlantID FROM Plant");
+            List<string> plantTwo = new MainForm().FillComboBox("SELECT Name FROM Plant");
             for (int i = 0; i < plant.Count; i++)
             {
-                cbbPlant.Items.Add(plant[i]);
+                cbbPlant.Items.Add(plant[i]+" - "+plantTwo[i]);
             }
         }
     }
