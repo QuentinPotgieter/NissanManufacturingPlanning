@@ -12,6 +12,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class SplashScreen : Form
     {
+        public string UserRole;
         public SplashScreen()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace NissanManufacturingPlanning
             timer.Stop();
             Hide();
             MainForm form = new MainForm();
+            form.UserRole = UserRole;
             form.ShowDialog();
             Close();
         }

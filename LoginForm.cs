@@ -51,9 +51,10 @@ namespace NissanManufacturingPlanning
             //login challenge
             String ReadUsername = "";
             String ReadPassword = "";
+            String ReadRole = "";
             conn = new SqlConnection(connStr);
             conn.Open();
-            string sqlComm = "SELECT FirstName,Password FROM [User] WHERE FirstName = '" + usernameEntered + "' AND Password = '" + passwordEntered + "'";
+            string sqlComm = "SELECT FirstName,Password,Role FROM [User] WHERE FirstName = '" + usernameEntered + "' AND Password = '" + passwordEntered + "'";
             comm = new SqlCommand(sqlComm, conn);
             try
             {
@@ -65,6 +66,7 @@ namespace NissanManufacturingPlanning
                         {
                             ReadUsername = reader[0].ToString();
                             ReadPassword = reader[1].ToString();
+                            ReadRole = reader[2].ToString();
                         }
                         //on successfull login: 
                     }
@@ -72,6 +74,7 @@ namespace NissanManufacturingPlanning
                     {
                         Hide();
                         SplashScreen form = new SplashScreen();
+                        form.UserRole = ReadRole;
                         form.ShowDialog();
                         Close();
                     }
