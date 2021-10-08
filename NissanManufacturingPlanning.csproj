@@ -94,6 +94,12 @@
     <Compile Include="DerivativesForm.Designer.cs">
       <DependentUpon>DerivativesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     <EmbeddedResource Include="DerivativesForm.resx">
       <DependentUpon>DerivativesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +265,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>NissanManufacturingDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\LoginText.png" />
     <None Include="Resources\Backround.png" />
     <None Include="Resources\NissanLogo.png" />
   </ItemGroup>

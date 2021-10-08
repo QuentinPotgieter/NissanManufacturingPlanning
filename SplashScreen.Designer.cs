@@ -76,17 +76,17 @@ namespace NissanManufacturingPlanning
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(65, 406);
+            this.progressBar.Location = new System.Drawing.Point(50, 406);
             this.progressBar.MarqueeAnimationSpeed = 5;
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(672, 23);
+            this.progressBar.Size = new System.Drawing.Size(687, 23);
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar.TabIndex = 4;
             // 
             // timer
             // 
             this.timer.Enabled = true;
-            this.timer.Interval = 1000;
+            this.timer.Interval = 1500;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // pictureBox1
@@ -101,6 +101,7 @@ namespace NissanManufacturingPlanning
             this.pictureBox1.Size = new System.Drawing.Size(800, 450);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SplashScreen
             // 

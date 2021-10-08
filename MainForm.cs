@@ -161,7 +161,10 @@ namespace NissanManufacturingPlanning
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();            
+            Hide();
+            LoginForm form = new LoginForm();
+            form.ShowDialog();
+            Close();
         }
 
         private void managePlantsToolStripMenuItem_Click(object sender, EventArgs e)
