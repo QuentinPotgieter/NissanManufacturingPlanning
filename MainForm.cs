@@ -222,19 +222,31 @@ namespace NissanManufacturingPlanning
             this.Height = 699;
             this.Width = 1281;
 
-            //Do visibility for role
-            /*if (UserRole == "Administrator")
+            //Role Access
+            if (UserRole == "Administrator")
             {
-                menuStrip1
+                managePlantsToolStripMenuItem.Visible = true;
+                manageDerivativesToolStripMenuItem.Visible = true;
+                colorsToolStripMenuItem.Visible = true;
+                motorsToolStripMenuItem.Visible = true;
+                usersToolStripMenuItem.Visible = true;
             }
             if (UserRole == "Planner")
             {
-                menuStrip1
+                managePlantsToolStripMenuItem.Visible = true;
+                manageDerivativesToolStripMenuItem.Visible = false;
+                colorsToolStripMenuItem.Visible = false;
+                motorsToolStripMenuItem.Visible = false;
+                usersToolStripMenuItem.Visible = false;
             }
             if (UserRole == "Sales")
             {
-                menuStrip1
-            }*/
+                managePlantsToolStripMenuItem.Visible = false;
+                manageDerivativesToolStripMenuItem.Visible = false;
+                colorsToolStripMenuItem.Visible = false;
+                motorsToolStripMenuItem.Visible = false;
+                usersToolStripMenuItem.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
