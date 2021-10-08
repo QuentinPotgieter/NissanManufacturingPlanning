@@ -33,7 +33,7 @@ namespace NissanManufacturingPlanning
         private void SalesRequest_Shown(object sender, EventArgs e)
         {
             //load derivatives into combobox
-            List<string> deriv = new MainForm().FillComboBox("SELECT * FROM VehicleDerivative", cbbDerivative);
+            List<string> deriv = new MainForm().FillComboBox("SELECT * FROM VehicleDerivative");
             for (int i = 0; i < deriv.Count; i++)
             {
                 cbbDerivative.Items.Add(deriv[i]);

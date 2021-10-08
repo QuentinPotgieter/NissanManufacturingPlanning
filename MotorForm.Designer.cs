@@ -30,13 +30,13 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tbxDesc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblSize = new System.Windows.Forms.Label();
             this.numSize = new System.Windows.Forms.NumericUpDown();
             this.cbbType = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSize)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,15 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Type of Motor";
             // 
             // tbxDesc
             // 
@@ -97,6 +106,7 @@ namespace NissanManufacturingPlanning
             // 
             // cbbType
             // 
+            this.cbbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbType.FormattingEnabled = true;
             this.cbbType.Items.AddRange(new object[] {
             "XS",
@@ -118,15 +128,6 @@ namespace NissanManufacturingPlanning
             this.btnAdd.Text = "Add/Update";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Type of Motor";
             // 
             // MotorForm
             // 

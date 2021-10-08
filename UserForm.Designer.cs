@@ -30,7 +30,6 @@ namespace NissanManufacturingPlanning
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbRole = new System.Windows.Forms.ComboBox();
             this.tbxPw = new System.Windows.Forms.TextBox();
@@ -39,6 +38,7 @@ namespace NissanManufacturingPlanning
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,16 +61,6 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Details";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(86, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Create Profile";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -82,6 +72,7 @@ namespace NissanManufacturingPlanning
             // 
             // cbbRole
             // 
+            this.cbbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbRole.FormattingEnabled = true;
             this.cbbRole.Items.AddRange(new object[] {
             "Sales",
@@ -145,6 +136,16 @@ namespace NissanManufacturingPlanning
             this.tbxName.Size = new System.Drawing.Size(259, 20);
             this.tbxName.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(86, 200);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Create Profile";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,13 +165,13 @@ namespace NissanManufacturingPlanning
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbRole;
-        private System.Windows.Forms.TextBox tbxPw;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbxSurname;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox tbxName;
+        public System.Windows.Forms.TextBox tbxPw;
+        public System.Windows.Forms.TextBox tbxSurname;
     }
 }

@@ -22,10 +22,13 @@ namespace NissanManufacturingPlanning
             ModelForm model = new ModelForm();
             model.ShowDialog();
 
-            //Not everything in class is used
-            new MainForm().SqlInsert("INSERT INTO VehicleModel(ModelName,ModelYear) VALUES('"+ model.fmodel.getName() + "'," + model.fmodel.getYear() + ")");
+            if (model.fmodel != null)
+            {
+                //Not everything in class is used
+                new MainForm().SqlInsert("INSERT INTO VehicleModel(ModelName,ModelYear) VALUES('" + model.fmodel.getName() + "'," + model.fmodel.getYear() + ")");
 
-            new MainForm().QuerySelectAll("VehicleModel", dgvModel);
+                new MainForm().QuerySelectAll("VehicleModel", dgvModel);
+            }
         }
 
         private void Models_Shown(object sender, EventArgs e)

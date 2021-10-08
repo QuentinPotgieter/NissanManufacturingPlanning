@@ -13,7 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class MotorForm : Form
     {
-        public Motor fMotor;
+        public Motor fMotor = null;
         public MotorForm()
         {
             InitializeComponent();
