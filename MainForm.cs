@@ -52,7 +52,7 @@ namespace NissanManufacturingPlanning
             }
         }
 
-        public List<string> FillComboBox(string query) //Method is to return array used to fill combo box
+        public List<string> FillComboBox(string query) //Method is to return array used to fill combo box 
         {
             List<string> list = new List<string>();
             
@@ -218,8 +218,7 @@ namespace NissanManufacturingPlanning
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Adding Check if production plan is empty
-            if (dgvProductionOutput.Rows.Count == 0)
+            if (dgvProductionOutput.Rows.Count == 0)//Adding Check if production plan is empty (Michael)
             {
                 MessageBox.Show("No values in Production Output, Unable to Link");
             }
@@ -235,22 +234,38 @@ namespace NissanManufacturingPlanning
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string name = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestID"].Value.ToString();
-            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            if (dgvSalesRequests.Rows.Count == 0)//Adding Exception handling for empty DataGridview (Michael)
+
             {
-                new MainForm().SqlDelete("DELETE FROM SalesRequest WHERE SalesRequestID = " + name);
+                MessageBox.Show("No values in Sales Request, Unable to Remove");
             }
-            new MainForm().QuerySelectAll("SalesRequest", dgvSalesRequests);
+            else
+            {
+                string name = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestID"].Value.ToString();
+                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    new MainForm().SqlDelete("DELETE FROM SalesRequest WHERE SalesRequestID = " + name);
+                }
+                new MainForm().QuerySelectAll("SalesRequest", dgvSalesRequests);
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string name = dgvProductionOutput.Rows[dgvProductionOutput.SelectedCells[0].RowIndex].Cells["PlanID"].Value.ToString();
-            if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            if (dgvProductionOutput.Rows.Count == 0) // Check if Production Output is empty, and throw message.
             {
-                new MainForm().SqlDelete("DELETE FROM ProductionPlan WHERE PlanID = " + name);
+                MessageBox.Show("No values in Production Output, Unable to Remove");
             }
-            new MainForm().QuerySelectAll("ProductionPlan", dgvProductionOutput);
+            else
+            {
+                string name = dgvProductionOutput.Rows[dgvProductionOutput.SelectedCells[0].RowIndex].Cells["PlanID"].Value.ToString();
+                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    new MainForm().SqlDelete("DELETE FROM ProductionPlan WHERE PlanID = " + name);
+                }
+                new MainForm().QuerySelectAll("ProductionPlan", dgvProductionOutput);
+            }
         }
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
