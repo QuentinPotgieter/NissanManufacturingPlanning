@@ -50,9 +50,10 @@ namespace NissanManufacturingPlanning
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Highlight;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::NissanManufacturingPlanning.Properties.Resources.LoginText;
-            this.pictureBox1.Location = new System.Drawing.Point(185, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(280, 55);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(329, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -61,9 +62,9 @@ namespace NissanManufacturingPlanning
             this.pictureBox2.BackColor = System.Drawing.SystemColors.Highlight;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = global::NissanManufacturingPlanning.Properties.Resources.NissanLogo;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(-319, 1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(249, 145);
+            this.pictureBox2.Size = new System.Drawing.Size(980, 204);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -166,6 +167,7 @@ namespace NissanManufacturingPlanning
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 481);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelEx);
             this.Controls.Add(this.button2);
@@ -175,7 +177,6 @@ namespace NissanManufacturingPlanning
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "LoginForm";
