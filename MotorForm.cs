@@ -21,7 +21,7 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(numSize) != 0 || cbbType.Text == null)
+            if (Convert.ToInt32(numSize.Value) == 0 || cbbType.SelectedIndex == -1)
             {
                 MessageBox.Show("Please enter a value in each field");
                 return;

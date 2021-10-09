@@ -22,7 +22,7 @@ namespace NissanManufacturingPlanning
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Input validation
-            if (tbxName.Text == "" || cbbMotor.Text == "")
+            if (tbxName.Text == "")
             {
                 MessageBox.Show("Please enter a value for each field");
                 return;
@@ -33,12 +33,11 @@ namespace NissanManufacturingPlanning
                 return;
             }
             
-            int length = cbbMotor.Text.IndexOf("-") - 1;
             string name = tbxName.Text;
             int year = Convert.ToInt32(numYear.Value);
-            int motor = Convert.ToInt32(cbbMotor.Text.Substring(0,length));
 
-            fmodel = new Model(name,motor,year);
+
+            fmodel = new Model(name,year);
             
             ModelsForm.ActiveForm.Show();
             this.Close();
@@ -46,12 +45,7 @@ namespace NissanManufacturingPlanning
 
         private void ModelForm_Shown(object sender, EventArgs e)
         {
-            List<string> motor = new MainForm().FillComboBox("SELECT MotorID FROM Motor");
-            List<string> motorTwo = new MainForm().FillComboBox("SELECT Description FROM Motor");
-            for (int i = 0; i < motor.Count; i++)
-            {
-                cbbMotor.Items.Add(motor[i] + " - " + motorTwo[i]);
-            }
+
         }
     }
 }

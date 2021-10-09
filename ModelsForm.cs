@@ -24,8 +24,7 @@ namespace NissanManufacturingPlanning
 
             if (model.fmodel != null)
             {
-                //Not everything in class is used
-                new MainForm().SqlInsert("INSERT INTO VehicleModel(ModelName,ModelYear) VALUES('" + model.fmodel.getName() + "'," + model.fmodel.getYear() + ")");
+                new MainForm().SqlInsert("INSERT INTO VehicleModel(ModelName,ModelYear) VALUES('" + model.fmodel.name + "'," + model.fmodel.getYear() + ")");
 
                 new MainForm().QuerySelectAll("VehicleModel", dgvModel);
             }
