@@ -142,11 +142,11 @@
     <Compile Include="PlantsForm.Designer.cs">
       <DependentUpon>PlantsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductionPlan.cs">
+    <Compile Include="ProductionPlanForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProductionPlan.Designer.cs">
-      <DependentUpon>ProductionPlan.cs</DependentUpon>
+    <Compile Include="ProductionPlanForm.Designer.cs">
+      <DependentUpon>ProductionPlanForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -216,8 +216,8 @@
     <EmbeddedResource Include="PlantsForm.resx">
       <DependentUpon>PlantsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductionPlan.resx">
-      <DependentUpon>ProductionPlan.cs</DependentUpon>
+    <EmbeddedResource Include="ProductionPlanForm.resx">
+      <DependentUpon>ProductionPlanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

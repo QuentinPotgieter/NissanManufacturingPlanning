@@ -210,7 +210,7 @@ namespace NissanManufacturingPlanning
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ProductionPlan productionPlan = new ProductionPlan();
+            ProductionPlanForm productionPlan = new ProductionPlanForm();
             productionPlan.ShowDialog();
             QuerySelectAll("ProductionPlan", dgvProductionOutput);
         }
@@ -230,6 +230,12 @@ namespace NissanManufacturingPlanning
                 colorsToolStripMenuItem.Visible = true;
                 motorsToolStripMenuItem.Visible = true;
                 usersToolStripMenuItem.Visible = true;
+
+                button2.Enabled = true;
+                button4.Enabled = true;
+                button3.Enabled = true;
+                button5.Enabled = true;
+                button1.Enabled = true;
             }
             if (UserRole == "Planner")
             {
@@ -238,6 +244,12 @@ namespace NissanManufacturingPlanning
                 colorsToolStripMenuItem.Visible = false;
                 motorsToolStripMenuItem.Visible = false;
                 usersToolStripMenuItem.Visible = false;
+                
+                button2.Enabled = false;
+                button4.Enabled = false;
+                button3.Enabled = true;
+                button5.Enabled = true;
+                button1.Enabled = true;
             }
             if (UserRole == "Sales")
             {
@@ -246,6 +258,12 @@ namespace NissanManufacturingPlanning
                 colorsToolStripMenuItem.Visible = false;
                 motorsToolStripMenuItem.Visible = false;
                 usersToolStripMenuItem.Visible = false;
+                
+                button2.Enabled = true;
+                button4.Enabled = true;
+                button3.Enabled = false;
+                button5.Enabled = false;
+                button1.Enabled = false;
             }
         }
 
@@ -261,8 +279,10 @@ namespace NissanManufacturingPlanning
                 string sales = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestID"].Value.ToString();
 
                 SqlUpdate("UPDATE [SalesRequest] SET PlanID = " + plan + " WHERE SalesRequestID = " + sales);
+                MessageBox.Show("Succsesfully linked SalesRequestID: "+sales+" PlanID: "+plan);
             }
-            
+            QuerySelectAll("SalesRequest", dgvSalesRequests);
+            QuerySelectAll("ProductionPlan", dgvProductionOutput);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -274,10 +294,10 @@ namespace NissanManufacturingPlanning
             }
             else
             {
-                string name = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestID"].Value.ToString();
-                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                string id = dgvSalesRequests.Rows[dgvSalesRequests.SelectedCells[0].RowIndex].Cells["SalesRequestID"].Value.ToString();
+                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " +id+ "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                 {
-                    new MainForm().SqlDelete("DELETE FROM SalesRequest WHERE SalesRequestID = " + name);
+                    new MainForm().SqlDelete("DELETE FROM SalesRequest WHERE SalesRequestID = " + id);
                 }
                 new MainForm().QuerySelectAll("SalesRequest", dgvSalesRequests);
             }
@@ -292,10 +312,11 @@ namespace NissanManufacturingPlanning
             }
             else
             {
-                string name = dgvProductionOutput.Rows[dgvProductionOutput.SelectedCells[0].RowIndex].Cells["PlanID"].Value.ToString();
-                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " + name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                string id = dgvProductionOutput.Rows[dgvProductionOutput.SelectedCells[0].RowIndex].Cells["PlanID"].Value.ToString();
+                string name = dgvProductionOutput.Rows[dgvProductionOutput.SelectedCells[0].RowIndex].Cells["Name"].Value.ToString();
+                if (DialogResult.Yes == MessageBox.Show("Do you want to Delete " +id+" - "+ name + "?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                 {
-                    new MainForm().SqlDelete("DELETE FROM ProductionPlan WHERE PlanID = " + name);
+                    new MainForm().SqlDelete("DELETE FROM ProductionPlan WHERE PlanID = " + id);
                 }
                 new MainForm().QuerySelectAll("ProductionPlan", dgvProductionOutput);
             }

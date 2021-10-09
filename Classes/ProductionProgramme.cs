@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NissanManufacturingPlanning.Classes
 {
-    public abstract class ProductionProgramme
+    public class ProductionProgramme
     {
         public int rate;
         public int availablilty;
@@ -48,7 +48,5 @@ namespace NissanManufacturingPlanning.Classes
         {
             return (getRate() * getAvailablity() * getShiftDuration()) / 100;
         }
-
-        public abstract bool canProduce(int output);
     }
 }

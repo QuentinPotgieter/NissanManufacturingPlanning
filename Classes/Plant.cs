@@ -42,10 +42,5 @@ namespace NissanManufacturingPlanning.Classes
         {
             return "'"+getName()+"','"+getCountryId()+"','"+getAddress() + "'," + getRate().ToString() + "," + getAvailablity().ToString() + "," + getShiftDuration().ToString();
         }
-
-        public override bool canProduce(int output)
-        {
-            return output <= getOutput();
-        }
     }
 }

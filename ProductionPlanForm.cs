@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NissanManufacturingPlanning.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,21 +11,34 @@ using System.Windows.Forms;
 
 namespace NissanManufacturingPlanning
 {
-    public partial class ProductionPlan : Form
+    public partial class ProductionPlanForm : Form
     {
-        public ProductionPlan()
+        public ProductionProgramme ppm;
+        public ProductionPlanForm()
         {
             InitializeComponent();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (tbxName.Text == "" || cbbPlant.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please enter a value in each field");
+                return;
+            }
+            
             int length = cbbPlant.SelectedItem.ToString().IndexOf("-")-1;
             string name = tbxName.Text;
             string plant = cbbPlant.SelectedItem.ToString().Substring(0,length);
             int rate = Convert.ToInt32(numRate.Value);
             int uptime = Convert.ToInt32(numUptime.Value);
-            int duration = Convert.ToInt32(numDuration.Value)*60;
+            int duration = Convert.ToInt32(numDuration.Value);
+
+            if (rate == 0 || uptime == 0 || duration == 0)
+            {
+                MessageBox.Show("Please enter a quantity in each field");
+                return;
+            }
 
             //input validation
             if (name == null)
@@ -38,7 +52,12 @@ namespace NissanManufacturingPlanning
                 return;
             }
 
-            new MainForm().SqlInsert("INSERT INTO [ProductionPlan] (PlantID, Name, Rate, Uptime, ShiftDuration) VALUES ('"+plant+"','"+name+"',"+rate.ToString()+","+uptime.ToString()+","+duration.ToString()+")");
+            ppm = new ProductionProgramme(rate,uptime,duration);
+
+            if (ppm != null)
+            {
+                new MainForm().SqlInsert("INSERT INTO [ProductionPlan] (PlantID, Name, Rate, Uptime, ShiftDuration) VALUES ('" + plant + "','" + name + "'," + ppm.getRate().ToString() + "," + ppm.getAvailablity().ToString() + "," + ppm.getShiftDuration().ToString() + ")");
+            }
 
             MainForm.ActiveForm.Show();
             this.Close();

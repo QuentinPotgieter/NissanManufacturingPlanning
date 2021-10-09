@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NissanManufacturingPlanning.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace NissanManufacturingPlanning
 {
     public partial class SalesRequestForm : Form
     {
+        public SalesRequest ssr;
         public SalesRequestForm()
         {
             InitializeComponent();
@@ -19,15 +21,28 @@ namespace NissanManufacturingPlanning
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (numQuantity.Value == 0)
+            {
+                MessageBox.Show("Please enter a quantity");
+                return;
+            }
+            if (cbbDerivative.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a derivative");
+                return;
+            }
+
             int length = cbbDerivative.SelectedItem.ToString().IndexOf("-")-1;
             DateTime date       = dateRequired.Value;
             int      quantity   = Convert.ToInt32(numQuantity.Value);
             string   derivative = cbbDerivative.SelectedItem.ToString().Substring(0,length);
 
-            MessageBox.Show(quantity.ToString());
+            ssr = new SalesRequest(quantity,Convert.ToInt32(derivative),0,date);
 
-            new MainForm().SqlInsert("INSERT INTO SalesRequest (DateRequired, DerivativeID, Quantity, PlanID) VALUES ('" + date.ToString("yyyy-MM-dd") + "',"+ derivative.ToString() + ","+ quantity.ToString() + ",0)");
-
+            if (ssr != null)
+            {
+                new MainForm().SqlInsert("INSERT INTO SalesRequest (DateRequired, DerivativeID, Quantity, PlanID) VALUES ('" + ssr.getDateRequired().ToString("yyyy-MM-dd") + "'," + ssr.getdDerivativeId().ToString() + "," + ssr.getQuantity().ToString() + ","+ssr.getPlanId()+")");
+            }
             MainForm.ActiveForm.Show();
             this.Close();
         }

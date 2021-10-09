@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NissanManufacturingPlanning.Classes
 {
-    class SalesRequest
+    public class SalesRequest
     {
         private int quantity, derivativeId, planId;
         private DateTime dateRequired;
@@ -30,23 +30,23 @@ namespace NissanManufacturingPlanning.Classes
             this.dateRequired = dateRequired;
         }
 
-        private int getQuantity()
+        public int getQuantity()
         {
             return quantity;
         }
 
-        private int getdDerivativeId()
+        public int getdDerivativeId()
         {
             return derivativeId;
         }
 
 
-        private int getPlanId()
+        public int getPlanId()
         {
             return planId;
         }
 
-        private DateTime getDateRequired()
+        public DateTime getDateRequired()
         {
             return dateRequired;
         }

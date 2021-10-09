@@ -275,7 +275,7 @@ namespace NissanManufacturingPlanning
             this.pictureBox1.Image = global::NissanManufacturingPlanning.Properties.Resources.Backround;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1265, 562);
+            this.pictureBox1.Size = new System.Drawing.Size(1265, 682);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -284,7 +284,7 @@ namespace NissanManufacturingPlanning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 562);
+            this.ClientSize = new System.Drawing.Size(1265, 682);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
