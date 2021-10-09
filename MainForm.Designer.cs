@@ -29,6 +29,7 @@ namespace NissanManufacturingPlanning
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@ namespace NissanManufacturingPlanning
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesRequests)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -81,6 +83,7 @@ namespace NissanManufacturingPlanning
             this.button4.Size = new System.Drawing.Size(146, 24);
             this.button4.TabIndex = 6;
             this.button4.Text = "Remove Sales Request";
+            this.tTip.SetToolTip(this.button4, "Remove the selected existing sales request");
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -92,6 +95,7 @@ namespace NissanManufacturingPlanning
             this.button2.Size = new System.Drawing.Size(146, 24);
             this.button2.TabIndex = 4;
             this.button2.Text = "Add Sales Request";
+            this.tTip.SetToolTip(this.button2, "Add a new sales request");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -108,6 +112,7 @@ namespace NissanManufacturingPlanning
             this.dgvSalesRequests.RowTemplate.Height = 33;
             this.dgvSalesRequests.Size = new System.Drawing.Size(529, 499);
             this.dgvSalesRequests.TabIndex = 0;
+            this.tTip.SetToolTip(this.dgvSalesRequests, "Existing Sales Requests");
             // 
             // groupBox2
             // 
@@ -131,6 +136,7 @@ namespace NissanManufacturingPlanning
             this.button3.Size = new System.Drawing.Size(146, 24);
             this.button3.TabIndex = 8;
             this.button3.Text = "Remove Production Plan";
+            this.tTip.SetToolTip(this.button3, "Remove the selected existing production plan");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -142,6 +148,7 @@ namespace NissanManufacturingPlanning
             this.button5.Size = new System.Drawing.Size(146, 24);
             this.button5.TabIndex = 7;
             this.button5.Text = "Add Production Plan";
+            this.tTip.SetToolTip(this.button5, "Add a new production plan");
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -158,6 +165,7 @@ namespace NissanManufacturingPlanning
             this.dgvProductionOutput.RowTemplate.Height = 33;
             this.dgvProductionOutput.Size = new System.Drawing.Size(524, 499);
             this.dgvProductionOutput.TabIndex = 0;
+            this.tTip.SetToolTip(this.dgvProductionOutput, "Existing Production Plans");
             // 
             // button1
             // 
@@ -167,6 +175,7 @@ namespace NissanManufacturingPlanning
             this.button1.Size = new System.Drawing.Size(116, 24);
             this.button1.TabIndex = 2;
             this.button1.Text = "Link";
+            this.tTip.SetToolTip(this.button1, "Link a Sales Request with an existing Production Output plan");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -331,6 +340,7 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip tTip;
     }
 }
 

@@ -29,11 +29,13 @@ namespace NissanManufacturingPlanning
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +64,7 @@ namespace NissanManufacturingPlanning
             this.button3.Size = new System.Drawing.Size(136, 30);
             this.button3.TabIndex = 3;
             this.button3.Text = "Update Profile";
+            this.toolTip1.SetToolTip(this.button3, "Update the selected existing user profile");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -73,6 +76,7 @@ namespace NissanManufacturingPlanning
             this.button1.Size = new System.Drawing.Size(136, 30);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add Profile";
+            this.toolTip1.SetToolTip(this.button1, "Add a new user profile");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -124,5 +128,6 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

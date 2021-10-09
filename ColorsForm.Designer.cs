@@ -29,11 +29,13 @@ namespace NissanManufacturingPlanning
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvColors = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,6 +64,7 @@ namespace NissanManufacturingPlanning
             this.button3.Size = new System.Drawing.Size(138, 36);
             this.button3.TabIndex = 3;
             this.button3.Text = "Remove Color";
+            this.toolTip1.SetToolTip(this.button3, "Remove the selected existing color");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -73,6 +76,7 @@ namespace NissanManufacturingPlanning
             this.button1.Size = new System.Drawing.Size(138, 38);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add Color";
+            this.toolTip1.SetToolTip(this.button1, "Add a new color");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -89,6 +93,7 @@ namespace NissanManufacturingPlanning
             this.dgvColors.RowTemplate.Height = 33;
             this.dgvColors.Size = new System.Drawing.Size(546, 458);
             this.dgvColors.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.dgvColors, "Existing colors");
             // 
             // pictureBox1
             // 
@@ -125,5 +130,6 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

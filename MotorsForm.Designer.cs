@@ -29,11 +29,13 @@ namespace NissanManufacturingPlanning
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvMotors = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMotors)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,6 +65,7 @@ namespace NissanManufacturingPlanning
             this.button2.Size = new System.Drawing.Size(158, 31);
             this.button2.TabIndex = 2;
             this.button2.Text = "Remove Motor";
+            this.toolTip1.SetToolTip(this.button2, "Remove the selected existing motor");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -74,6 +77,7 @@ namespace NissanManufacturingPlanning
             this.button1.Size = new System.Drawing.Size(158, 31);
             this.button1.TabIndex = 1;
             this.button1.Text = "Add Motor";
+            this.toolTip1.SetToolTip(this.button1, "Add a new motor");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -126,5 +130,6 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
