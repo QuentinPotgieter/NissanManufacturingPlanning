@@ -331,7 +331,13 @@ namespace NissanManufacturingPlanning
             usersForm.ShowDialog();
         }
 
-        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void basicToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataReportForm report = new DataReportForm();
+            report.ShowDialog();
+        }
+
+        private void salesRequestsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReportForm report = new ReportForm();
             report.ShowDialog();

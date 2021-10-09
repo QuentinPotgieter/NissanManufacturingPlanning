@@ -26,6 +26,22 @@ namespace NissanManufacturingPlanning
 
         private void ReportForm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                conn = new SqlConnection(MainForm.connStr);
+                conn.Open();
+                x1.Text = new SqlCommand("SELECT COUNT(ModelID) FROM VehicleModel", conn).ExecuteScalar().ToString();
+                x2.Text = new SqlCommand("SELECT COUNT(DerivativeID) FROM VehicleDerivative", conn).ExecuteScalar().ToString();
+                x7.Text = new SqlCommand("SELECT COUNT(PlantID) FROM Plant", conn).ExecuteScalar().ToString();
+                x11.Text = new SqlCommand("SELECT COUNT(SalesRequestID) FROM SalesRequest", conn).ExecuteScalar().ToString();
+                x12.Text = new SqlCommand("SELECT COUNT(SalesRequestID) FROM SalesRequest WHERE PlanID IS NOT NULL", conn).ExecuteScalar().ToString();
+                x16.Text = new SqlCommand("SELECT COUNT(PlanID) FROM ProductionPlan WHERE PlanID IS NOT NULL", conn).ExecuteScalar().ToString();
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

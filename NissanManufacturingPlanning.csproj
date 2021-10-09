@@ -82,6 +82,12 @@
     <Compile Include="ColorsForm.Designer.cs">
       <DependentUpon>ColorsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DerivativeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,11 +156,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportForm.cs">
+    <Compile Include="DataReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportForm.Designer.cs">
-      <DependentUpon>ReportForm.cs</DependentUpon>
+    <Compile Include="DataReportForm.Designer.cs">
+      <DependentUpon>DataReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SalesRequestForm.cs">
       <SubType>Form</SubType>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ColorsForm.resx">
       <DependentUpon>ColorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DerivativeForm.resx">
       <DependentUpon>DerivativeForm.cs</DependentUpon>
@@ -229,8 +238,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="ReportForm.resx">
-      <DependentUpon>ReportForm.cs</DependentUpon>
+    <EmbeddedResource Include="DataReportForm.resx">
+      <DependentUpon>DataReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesRequestForm.resx">
       <DependentUpon>SalesRequestForm.cs</DependentUpon>
