@@ -301,6 +301,7 @@ namespace NissanManufacturingPlanning
                     new MainForm().SqlDelete("DELETE FROM SalesRequest WHERE SalesRequestID = " + id);
                 }
                 new MainForm().QuerySelectAll("SalesRequest", dgvSalesRequests);
+                new MainForm().QuerySelectAll("ProductionPlan", dgvProductionOutput);
             }
             
         }
@@ -320,6 +321,7 @@ namespace NissanManufacturingPlanning
                     new MainForm().SqlDelete("DELETE FROM ProductionPlan WHERE PlanID = " + id);
                 }
                 new MainForm().QuerySelectAll("ProductionPlan", dgvProductionOutput);
+                new MainForm().QuerySelectAll("SalesRequest", dgvSalesRequests);
             }
         }
 
