@@ -37,7 +37,7 @@ namespace NissanManufacturingPlanning
             int      quantity   = Convert.ToInt32(numQuantity.Value);
             string   derivative = cbbDerivative.SelectedItem.ToString().Substring(0,length);
 
-            ssr = new SalesRequest(quantity,Convert.ToInt32(derivative),0,date);
+            ssr = new SalesRequest(quantity,Convert.ToInt32(derivative),1,date);
 
             if (ssr != null)
             {

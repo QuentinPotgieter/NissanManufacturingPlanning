@@ -30,6 +30,7 @@ namespace NissanManufacturingPlanning
 
         //Database file must be in Data folder
         public static string connPath = AppDomain.CurrentDomain.BaseDirectory + @"Data\NissanManufacturingDB.mdf";
+        //public static string connPath = @"C:\Users\DEHAN-PC\Source\Repos\NissanManufacturingPlanning\Data\NissanManufacturingDB.mdf";
         public static string connStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+connPath+";Integrated Security=True";
 
         public void QuerySelectAll(string table, DataGridView dgv)
