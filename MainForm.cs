@@ -342,5 +342,16 @@ namespace NissanManufacturingPlanning
             ReportForm report = new ReportForm();
             report.ShowDialog();
         }
+
+        private void linkingProductionOutputSalesRequestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm helpform = new HelpForm();
+            helpform.ShowDialog();
+        }
     }
 }
