@@ -31,7 +31,6 @@ namespace NissanManufacturingPlanning
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dgvSalesRequests = new System.Windows.Forms.DataGridView();
@@ -55,11 +54,11 @@ namespace NissanManufacturingPlanning
             this.basicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesRequestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tTip = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.generalHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tTip = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesRequests)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -70,7 +69,6 @@ namespace NissanManufacturingPlanning
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.dgvSalesRequests);
@@ -82,16 +80,6 @@ namespace NissanManufacturingPlanning
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sales Requests";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 547);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 39);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Add Sales Request to order vehicles:\r\n\r\n\r\n";
             // 
             // button4
             // 
@@ -324,43 +312,43 @@ namespace NissanManufacturingPlanning
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::NissanManufacturingPlanning.Properties.Resources.Backround;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1265, 552);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // generalHelpToolStripMenuItem
             // 
             this.generalHelpToolStripMenuItem.Name = "generalHelpToolStripMenuItem";
-            this.generalHelpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generalHelpToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.generalHelpToolStripMenuItem.Text = "General Help";
             this.generalHelpToolStripMenuItem.Click += new System.EventHandler(this.generalHelpToolStripMenuItem_Click);
             // 
             // reportingToolStripMenuItem
             // 
             this.reportingToolStripMenuItem.Name = "reportingToolStripMenuItem";
-            this.reportingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportingToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.reportingToolStripMenuItem.Text = "Reporting";
             this.reportingToolStripMenuItem.Click += new System.EventHandler(this.reportingToolStripMenuItem_Click);
             // 
             // userRolesToolStripMenuItem
             // 
             this.userRolesToolStripMenuItem.Name = "userRolesToolStripMenuItem";
-            this.userRolesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.userRolesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.userRolesToolStripMenuItem.Text = "User Roles";
             this.userRolesToolStripMenuItem.Click += new System.EventHandler(this.userRolesToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::NissanManufacturingPlanning.Properties.Resources.Backround;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1265, 596);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 552);
+            this.ClientSize = new System.Drawing.Size(1265, 596);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -372,7 +360,6 @@ namespace NissanManufacturingPlanning
             this.Text = "Nissan Production Planning";
             this.Shown += new System.EventHandler(this.Main_Shown);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesRequests)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductionOutput)).EndInit();
@@ -409,7 +396,6 @@ namespace NissanManufacturingPlanning
         private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolTip tTip;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem basicToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salesRequestsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
