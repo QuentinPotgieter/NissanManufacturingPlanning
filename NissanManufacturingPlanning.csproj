@@ -88,6 +88,18 @@
     <Compile Include="HelpForm.Designer.cs">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm2.Designer.cs">
+      <DependentUpon>HelpForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm3.Designer.cs">
+      <DependentUpon>HelpForm3.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +213,12 @@
     <EmbeddedResource Include="HelpForm.resx">
       <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm2.resx">
+      <DependentUpon>HelpForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm3.resx">
+      <DependentUpon>HelpForm3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +233,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ModelForm.resx">
       <DependentUpon>ModelForm.cs</DependentUpon>

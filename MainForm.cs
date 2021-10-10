@@ -350,8 +350,42 @@ namespace NissanManufacturingPlanning
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void generalTipsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             HelpForm helpform = new HelpForm();
             helpform.ShowDialog();
+        }
+
+        private void generatingReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm2 helpform2 = new HelpForm2();
+            helpform2.ShowDialog();
+        }
+
+        private void usersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generalHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm helpForm = new HelpForm();
+            helpForm.ShowDialog();
+        }
+
+        private void reportingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm2 helpForm = new HelpForm2();
+            helpForm.ShowDialog();
+        }
+
+        private void userRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm3 helpForm = new HelpForm3();
+            helpForm.ShowDialog();
         }
     }
 }

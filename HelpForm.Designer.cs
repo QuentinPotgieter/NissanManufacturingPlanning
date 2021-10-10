@@ -80,7 +80,7 @@ namespace NissanManufacturingPlanning
             this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox2.Location = new System.Drawing.Point(12, 105);
+            this.richTextBox2.Location = new System.Drawing.Point(8, 102);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.ReadOnly = true;
             this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -119,7 +119,7 @@ namespace NissanManufacturingPlanning
             this.richTextBox4.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox4.Location = new System.Drawing.Point(8, 306);
+            this.richTextBox4.Location = new System.Drawing.Point(12, 306);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.ReadOnly = true;
             this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -142,7 +142,7 @@ namespace NissanManufacturingPlanning
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 536);
+            this.label4.Location = new System.Drawing.Point(134, 543);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 25);
             this.label4.TabIndex = 10;
@@ -171,9 +171,9 @@ namespace NissanManufacturingPlanning
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(213, 528);
+            this.button1.Location = new System.Drawing.Point(204, 537);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 40);
+            this.button1.Size = new System.Drawing.Size(99, 31);
             this.button1.TabIndex = 12;
             this.button1.Text = "Show";
             this.button1.UseVisualStyleBackColor = true;
