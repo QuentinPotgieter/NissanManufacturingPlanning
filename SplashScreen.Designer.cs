@@ -58,9 +58,9 @@ namespace NissanManufacturingPlanning
             this.label2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(-4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 19);
+            this.label2.Size = new System.Drawing.Size(139, 19);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Version 0.1 Beta";
+            this.label2.Text = "Version 1.0 (2021)";
             // 
             // label3
             // 
